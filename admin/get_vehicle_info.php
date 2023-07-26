@@ -87,25 +87,36 @@ $row = mysqli_fetch_assoc($vresult);
 
 <div class="col-md-4">
     <div class="mt-4">
+        <p>Vehicle Image:</p>
     <img class="image-fluid" src="uploadimg/<?php echo $row["v_img"];?>" width=75%>
     </div>
-    <div class="mt-4"><img class="image-fluid" src="uploadimg/<?php echo $row["v_cert_img"];?>" width=75%></div>
+    <div class="mt-4">
+    <p>Vehicle Certificate:</p><img class="image-fluid" src="uploadimg/<?php echo $row["v_cert_img"];?>" width=75%></div>
   
     </div>
 
     <div class="col-md-4">
-    <div class="mt-4"><img class="image-fluid" src="uploadimg/<?php echo $row["v_drv_img"];?>" width=75%></div>
-   <div class="mt-4"> <img class="image-fluid" src="uploadimg/<?php echo $row["v_drv_lic"];?>" width=75%></div>
+    <div class="mt-4"><p>Driver Image:</p><img class="image-fluid" src="uploadimg/<?php echo $row["v_drv_img"];?>" width=75%></div>
+   <div class="mt-4"><p>Driver's License:</p> <img class="image-fluid" src="uploadimg/<?php echo $row["v_drv_lic"];?>" width=75%></div>
     </div>
 </div> 
 </div>
 
 <?php
 }
-
 }
-
 ?>
+<form action="d_approvalAction.php" method="post">
+<div class="d-flex justify-content-center">
+<a
+    name="submit"
+    class="btn btn-danger"
+    href="d_approvalAction.php?d_id=<?php echo $row["d_id"]; ?>"
+    role="button"
+  >Approve this Driver</a> 
+</div>
+</form>
+
      
 
 

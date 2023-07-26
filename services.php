@@ -7,14 +7,29 @@
 <link href="css/revolution-slider.css" rel="stylesheet">
 <link rel="stylesheet" href="css/jquery-ui.css">
 <link href="css/style.css" rel="stylesheet">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link href="css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+
+    .car-info-block{
+        margin: 80px;
+    }
+    .car-info-block .inner-box{
+        border-width: 2px;
+        border-color:#ff8201;
+    }
+    
+    .car-info-block .image{
+        margin:40px;
+    }
+
+</style>
 </head>
 
 <body>
@@ -37,204 +52,120 @@ require('header.php');
         </div>
     </section>
     <!--End Page Title-->
-    
-    <!--Services Block-->
-    <section class="services-section-one style-two">
-    	<div class="auto-container">
-        	
-            <div class="sec-title">
-                <div class="inner-title-box">
-                    <h2>PROVIDING AMAZING SERVICES TO OUR CLIENTS</h2>
-                </div>
-            </div>
-            
-            <div class="row clearfix">
-            
-                <!--Services Block-->
-                <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="icon-box">
-                                <span class="icon flaticon-piggy-bank"></span>
-                            </div>
-                            <span class="number">01</span>
-                        </div>
-                        <div class="lower-box">
-                            <h3><a href="services.php">Fixed Rates</a></h3>
-                            <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!--Services Block-->
-                <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="icon-box">
-                                <span class="icon flaticon-car"></span>
-                            </div>
-                            <span class="number">02</span>
-                        </div>
-                        <div class="lower-box">
-                            <h3><a href="services.php">Reliable Transfers</a></h3>
-                            <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!--Services Block-->
-                <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="icon-box">
-                                <span class="icon flaticon-monitor-1"></span>
-                            </div>
-                            <span class="number">03</span>
-                        </div>
-                        <div class="lower-box">
-                            <h3><a href="services.php">Free Cancellation</a></h3>
-                            <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!--Services Block-->
-                <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="icon-box">
-                                <span class="icon flaticon-signs"></span>
-                            </div>
-                            <span class="number">04</span>
-                        </div>
-                        <div class="lower-box">
-                            <h3><a href="services.php">Award winning Service</a></h3>
-                            <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!--Services Block-->
-                <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="icon-box">
-                                <span class="icon flaticon-star"></span>
-                            </div>
-                            <span class="number">05</span>
-                        </div>
-                        <div class="lower-box">
-                            <h3><a href="services.php">Quality Vehicles</a></h3>
-                            <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!--Services Block-->
-                <div class="services-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="icon-box">
-                                <span class="icon flaticon-24-hours-1"></span>
-                            </div>
-                            <span class="number">06</span>
-                        </div>
-                        <div class="lower-box">
-                            <h3><a href="services.php">24H Customer Service</a></h3>
-                            <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!--End Services Block-->
-    
-    <!--App Section-->
-    <section class="app-section" style="background-image:url(images/background/2.png);">
-    	<div class="auto-container">
-        	<div class="row clearfix">
-            	<!--Content Column-->
-            	<div class="content-column col-md-6 col-sm-12 col-xs-12">
-                	<div class="inner-box">
-                    	<h2>ZAGREB APP IS LIVE, DOWNLOAD IT NOW!</h2>
-                        <div class="dark-text">Choose your platform and get started</div>
-                        <div class="text">Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quande quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos come dere carnem. Search for solum oculi eorum defunctis cerebro. </div>
-                        <a href="#" class="app-btn"><span class="icon flaticon-apple"></span>Download for <br><span class="app-name">Apple iOS</span></a>
-                        <a href="#" class="app-btn"><span class="icon flaticon-android-logo"></span>Download for <br><span class="app-name">Android</span></a>
-                    </div>
-                </div>
-                <!--Image Column-->
-                <div class="image-column col-md-6 col-sm-12 col-xs-12">
-                	<figure class="image wow slideInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<img src="images/resource/app-mobile.png" alt="" />
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End App Section-->
-    
-    <!--Cars Section-->
-    <section class="cars-section">
-    	<div class="auto-container">
-        	<div class="content-container">
-            	<div class="row clearfix">
-                	<!--Content Column-->
-                	<div class="content-column col-md-7 col-sm-12 col-xs-12">
-                    	<div class="inner-box">
-                        	<!--Sec Title-->
-                        	<div class="sec-title">
-                                <div class="inner-title-box">
-                                    <h2>IRRESISTABLE POWER, <br> UNPARALLELED PRESENCE</h2>
-                                    <h4 class="rotate-title">OUR CARS</h4>
+
+    <section class="cars-info-section list-view">
+    <div class="car-info-block">
+
+                            <div class="inner-box" >
+                                <div class="clearfix">
+                                    <div class="car-column col-md-3 col-sm-3">
+                                        <!--Image-->
+                                        <div class="image">
+                                            <a href="booking.php">
+                                                <img src="images/resource/car-7.jpg" alt="" /></a>
+                                        </div>
+                                     </div>
+                                     
+                                    <div class="car-column col-md-3 col-sm-3">
+                                       <!--lower box-->
+                                       <div class="lower-box">
+                                           <h3><a href="booking.php">BASIC RIDE</a></h3>
+                                           <div class="more-info"> 
+                                               <ul>
+                                                   <li>Class: <span>Basic</span></li>
+                                                   <li>Air Condition: <span>No</span></li>
+                                                   <li>Style: <span>MUV</span></li>
+                                                   <li>Transmission: <span>Automatic</span></li>
+                                               </ul>
+                                               <div class="price-day">Rs.150<span>/km</span></div>
+                                           </div>
+                                           <div>
+                                            <br>
+                                             <p>Our budget-friendly "Without AC" option provides a comfortable and reliable ride at an affordable price. <br> This service is perfect for individuals seeking an efficient transportation solution without  <br> compromising on quality and safety.</p>
+                                           </div>
+                                           
+                                       </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <div class="dark-text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. </div>
-                            <div class="text">Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</div>
-                            <a href="#" class="theme-btn btn-style-one">Book This Car</a>
                         </div>
-                    </div>
-                    <!--Carousel Column-->
-                    <div class="carousel-column col-md-5 col-sm-12 col-xs-12">
-                    	<h2>CADILLAC ESCALADE LIMO</h2>
-                        <div class="single-item-carousel">
                         
-                        	<!--Car Item-->
-                            <div class="car-item">
-                            	<figure class="image">
-                                	<img src="images/resource/car.png" alt="" />
-                                </figure>
+
+                          <!--car info block-->
+                          <div class="car-info-block">
+                            <div class="inner-box">
+                                <div class="clearfix">
+                                    <div class="car-column col-md-3 col-sm-3">
+                                        <!--Image-->
+                                        <div class="image">
+                                            <a href="booking.php"><img src="images/resource/car-8.jpg" alt="" /></a>
+                                        </div>
+                                     </div>
+                                     
+                                     <div class="car-column col-md-3 col-sm-3">
+                                        <!--lower box-->
+                                        <div class="lower-box">
+                                            <h3><a href="booking.php">AC RIDE</a></h3>
+                                            <div class="more-info">
+                                                <ul>
+                                                    <li>Class: <span>Standard</span></li>
+                                                    <li>Air Condition: <span>Yes</span></li>
+                                                    <li>Style: <span>SUV</span></li>
+                                                    <li>Transmission: <span>Automatic</span></li>
+                                                </ul>
+                                                <div class="price-day">Rs.250<span>/km</span></div>
+                                            </div>
+                                            <div>
+                                            <br>
+                                             <p>Stay cool and refreshed during your journey with our "With AC" option. Experience a climate-controlled environment to make your ride more pleasant, especially during Pakistan's warm weather conditions.</p>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                            
-                           <!--Car Item-->
-                            <div class="car-item">
-                            	<figure class="image">
-                                	<img src="images/resource/car.png" alt="" />
-                                </figure>
-                            </div>
-                            
-                            <!--Car Item-->
-                            <div class="car-item">
-                            	<figure class="image">
-                                	<img src="images/resource/car.png" alt="" />
-                                </figure>
-                            </div>
-                            
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Cars Section-->
+                        
+                        <!--car info block-->
+                        <div class="car-info-block">
+                            <div class="inner-box">
+                                <div class="clearfix">
+                                    <div class="car-column col-md-3 col-sm-3">
+                                        <!--Image-->
+                                        <div class="image">
+                                            <a href="booking.php"><img src="images/resource/car-9.jpg" alt="" /></a>
+                                        </div>
+                                     </div>
+                                     
+                                     <div class="car-column col-md-3 col-sm-3">
+                                        <!--lower box-->
+                                        <div class="lower-box">
+                                            <h3><a href="booking.php">LUXURY RIDE</a></h3>
+                                            <div class="more-info">
+                                                <ul>
+                                                    <li>Class: <span>Luxury</span></li>
+                                                    <li>Air Condition: <span>Yes</span></li>
+                                                    <li>Style: <span>Subaru Trancare</span></li>
+                                                    <li>Transmission: <span>Automatic</span></li>
+                                                </ul>
+                                                <div class="price-day">Rs.350<span>/km</span></div>
+                                            </div>
+                                            <div>
+                                            <br>
+                                             <p>Indulge in the ultimate travel experience with our "Luxury Ride" service. Enjoy a premium and comfortable journey with extra amenities and personalized assistance, designed to make your special moments even more memorable.</p>
+                                           </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                
+                        </section>
+    
+  
     
     <?php
 require('footer.php');

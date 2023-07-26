@@ -46,7 +46,7 @@ include('sidebar.php');
 
 ?>
   
-    
+   <div class="d-md-flex justify-content-center mb-2 mt-1 ms-4"><h2>Customer Information</h2></div> 
 <table class="table table-dark table-hover">
   <thead>
     <tr>
@@ -79,7 +79,7 @@ include('sidebar.php');
       <td><?php echo $row['c_address'];?></td>
       <td><?php echo $row['c_email'];?></td>
       <td><a name="update" id="update" class="btn btn-success" href="customer_update.php?id=<?php echo $row["c_id"]?>" role="button">Update</a>  </td>
-      <td><a name="delete" id="cancelled" class="btn btn-danger" href="customer_delete.php?id=<?php echo $row["c_id"]?>" role="button">Cancelled</a>  </td>
+      <td><a name="delete" id="delete" class="btn btn-danger" href="customer_delete.php?id=<?php echo $row["c_id"]?>" role="button">Delete</a>  </td>
     
     </tr>
     <?php 

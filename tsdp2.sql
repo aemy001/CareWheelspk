@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2023 at 02:52 PM
+-- Generation Time: Jul 26, 2023 at 11:49 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,6 +40,25 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`a_id`, `a_username`, `a_email`, `a_password`) VALUES
 (1, 'ali', 'ali@gmail.com', 'alii');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking`
+--
+
+CREATE TABLE `booking` (
+  `booking_id` int(11) NOT NULL,
+  `pickup_date` date NOT NULL,
+  `pickup_time` time NOT NULL,
+  `pickup_location` varchar(55) NOT NULL,
+  `destination` varchar(55) NOT NULL,
+  `distance_km` int(11) DEFAULT NULL,
+  `c_id` int(11) DEFAULT NULL,
+  `d_id` int(11) DEFAULT NULL,
+  `service_id` int(11) DEFAULT NULL,
+  `v_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -94,20 +113,43 @@ INSERT INTO `drivers` (`d_id`, `d_fname`, `d_lname`, `d_phone`, `CNIC`, `d_email
 (14, ' Mujtaba', ' Haider', 3111111111, 4210172636421, 'mujtaba@gmail.com', 'gulberg', '12345', 'Approved'),
 (18, 'Arijit', 'Singh', 3111000001, 4210110101010, 'arijit@gmail.com', 'gulberg', '12345', 'Pending'),
 (20, 'Hamdan', 'Ali', 3020202022, 4210118181811, 'hamdan@gmail.com', 'garden', '12345', 'Pending'),
-(21, 'Hamza', 'Farjad', 20139876543, 2013987654321, 'hamza@gmail.com', 'gulberg', '12345', 'Pending'),
-(22, 'Khushhal', 'Rajpoot', 30981675432, 3098167543210, 'khushhal@gmail.com', 'DHA', '12345', 'Pending');
+(21, ' Hamza', ' Farjad', 20139876543, 2013987654321, 'hamza@gmail.com', 'gulberg', '12345', 'Approved'),
+(22, 'Khushhal', 'Rajpoot', 30981675432, 3098167543210, 'baigzoha02@gmail.com', 'DHA', '12345', 'Pending');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `drivers_request`
+-- Table structure for table `feedback`
 --
 
-CREATE TABLE `drivers_request` (
-  `dreq_id` int(11) NOT NULL,
-  `d_id` int(11) DEFAULT NULL,
-  `d_status` varchar(55) NOT NULL
+CREATE TABLE `feedback` (
+  `feedback_id` int(11) NOT NULL,
+  `ratings` varchar(55) NOT NULL,
+  `comment` varchar(55) NOT NULL,
+  `booking_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `service_id` int(11) NOT NULL,
+  `service_type` varchar(55) NOT NULL,
+  `AC` varchar(55) NOT NULL,
+  `priceperkm` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`service_id`, `service_type`, `AC`, `priceperkm`) VALUES
+(1, 'Basic Ride', 'No', 150),
+(3, 'AC Ride', 'Yes', 250),
+(4, 'Luxury Ride', 'Yes', 350);
 
 -- --------------------------------------------------------
 
@@ -150,6 +192,16 @@ ALTER TABLE `admin`
   ADD UNIQUE KEY `a_email` (`a_email`);
 
 --
+-- Indexes for table `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`booking_id`),
+  ADD KEY `c_id` (`c_id`),
+  ADD KEY `d_id` (`d_id`),
+  ADD KEY `service_id` (`service_id`),
+  ADD KEY `v_id` (`v_id`);
+
+--
 -- Indexes for table `customers_info`
 --
 ALTER TABLE `customers_info`
@@ -165,11 +217,17 @@ ALTER TABLE `drivers`
   ADD UNIQUE KEY `d_email` (`d_email`);
 
 --
--- Indexes for table `drivers_request`
+-- Indexes for table `feedback`
 --
-ALTER TABLE `drivers_request`
-  ADD PRIMARY KEY (`dreq_id`),
-  ADD KEY `d_id` (`d_id`);
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`feedback_id`),
+  ADD KEY `booking_id` (`booking_id`);
+
+--
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`service_id`);
 
 --
 -- Indexes for table `vehicles`
@@ -189,6 +247,12 @@ ALTER TABLE `admin`
   MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `customers_info`
 --
 ALTER TABLE `customers_info`
@@ -201,10 +265,16 @@ ALTER TABLE `drivers`
   MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `drivers_request`
+-- AUTO_INCREMENT for table `feedback`
 --
-ALTER TABLE `drivers_request`
-  MODIFY `dreq_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `feedback`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `vehicles`
@@ -217,10 +287,19 @@ ALTER TABLE `vehicles`
 --
 
 --
--- Constraints for table `drivers_request`
+-- Constraints for table `booking`
 --
-ALTER TABLE `drivers_request`
-  ADD CONSTRAINT `drivers_request_ibfk_1` FOREIGN KEY (`d_id`) REFERENCES `drivers` (`d_id`);
+ALTER TABLE `booking`
+  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `customers_info` (`c_id`),
+  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`d_id`) REFERENCES `drivers` (`d_id`),
+  ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`service_id`) REFERENCES `services` (`service_id`),
+  ADD CONSTRAINT `booking_ibfk_4` FOREIGN KEY (`v_id`) REFERENCES `vehicles` (`v_id`);
+
+--
+-- Constraints for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`booking_id`) REFERENCES `booking` (`booking_id`);
 
 --
 -- Constraints for table `vehicles`

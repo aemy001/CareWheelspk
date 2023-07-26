@@ -8,9 +8,6 @@
                 	<!--Footer Column-->
                     <div class="footer-column col-md-4 col-sm-4 col-xs-12">
                         <div class="footer-widget logo-widget">
-                            <div class="logo-box">
-                                <img src="images/footer-logo.png" alt="" />
-                            </div>
                             <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Alii missing oculis aliorum sicut serpere crabs nostram.</div>
                             <ul class="list-style">
                                 <li><span class="icon flaticon-travel"></span>361 A Napier Street, Knoxville, Newyork  </li>
@@ -77,7 +74,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                    	<div class="copyright">Copyright &copy; 2017 All Rights Reserved. </div>
+                    	<div class="copyright">Copyright &copy; 2023 All Rights Reserved. </div>
                     </div>
                     
                 </div>

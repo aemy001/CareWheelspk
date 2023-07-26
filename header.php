@@ -6,6 +6,11 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <title>Document</title>
 </head>
+<style>
+    div .logo-box{
+margin-top: 20px !important;
+    }
+</style>
 <body>
 <!-- Preloader -->
  <div class="preloader"></div>
@@ -50,7 +55,7 @@
                  <div class="outer-container clearfix">
                      <!--Logo Box-->
                      <div class="logo-box">
-                         <div class="logo"><a href="index.php"><img src="images/logo.png" alt=""></a></div>
+                         <div class="logo"><a href="index.php"><img src="images/logo1.png" style="width: 100%; height: 45px;" alt=""></a></div>
                      </div>
                      
                      <!--Nav Outer-->
@@ -84,40 +89,20 @@
                                      </li>
                                      <li><a href="about.php">About Us</a></li>
                                      <li><a href="services.php">Services</a></li>
-                                     <li class="dropdown"><a href="#">Our Cars</a>
-                                         <ul>
-                                             <li><a href="cars-grid.php">Cars Grid</a></li>
-                                             <li><a href="cars-list.php">Cars List</a></li>
-                                             <li><a href="driver_signup.php">Driver Signup</a></li>
-                                             <li><a href="booking.php">Booking</a></li>
-                                             <li><a href="confirmation.php">Confirmation</a></li>
-                                         </ul>
-                                     </li>
-                                     <li class="dropdown"><a href="#">Pages</a>
-                                         <ul>
-                                             <li><a href="faqs.php">FAQs</a></li>
-                                             <li><a href="error-page.php">404 Page</a></li>
-                                         </ul>
-                                     </li>
-                                     <li class="dropdown"><a href="#">Gallery</a>
-                                         <ul>
-                                             <li><a href="gallery-mixitup.php">Gallery Three Column</a></li>
-                                             <li><a href="gallery-masonry.php">Gallery Masonry</a></li>
-                                         </ul>
-                                     </li>
-                                     <li class="dropdown"><a href="#">Blog</a>
-                                         <ul>
-                                             <li><a href="blog.php">Our Blog</a></li>
-                                             <li><a href="blog-list.php">Blog List</a></li>
-                                             <li><a href="blog-detail.php">Blog Detail</a></li>
-                                         </ul>
-                                     </li>
                                      <li><a href="contact.php">Contact</a></li>
-                                     <li><a href="cust_signup.php">Sign Up</a></li>     
-                                     <li><a href="cust_login.php">LogIn </a></li>
-                                     <li><a href="cust_logout.php">Logout</a></li>
-                                    
-
+                                     <li><a href="booking.php">Ride</a></li>
+                                     <li class="dropdown"><a href="#">Sign Up</a>
+                                         <ul>
+                                             <li><a href="driver_signup.php">Signup to Drive</a></li>
+                                             <li><a href="cust_signup.php">Signup to Ride</a></li>
+                                         </ul>
+                                     </li>
+                                     <li class="dropdown"><a href="#">Log In</a>
+                                         <ul>
+                                             <li><a href="driver_login.php">Login to Drive</a></li>
+                                             <li><a href="cust_login.php">Login to Ride</a></li>
+                                         </ul>
+                                     </li>
                                      
                                   </ul>
                              </div>
@@ -150,7 +135,7 @@
          
              <!-- .logo -->
              <div class="logo text-center">
-                 <a href="index.php"><img src="images/logo-2.png" alt=""></a>			
+                 <a href="index.php"><img src="images/logo1.png" alt=""></a>			
              </div><!-- /.logo -->
              
              <!-- .Side-menu -->

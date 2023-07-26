@@ -42,129 +42,52 @@
     <!--Experiance Section-->
     <section class="experiance-section">
     	<div class="auto-container">
-        	<div class="row clearfix">
+        	<div class="row clearfix justify-items-center">
             	<!--content column-->
-            	<div class="content-column col-md-6 col-sm-12 col-xs-12">
+            	<div class="content-column col-md-12 col-sm-12 col-xs-12">
                 	<div class="inner-box">
-                    	<h3><a href="services.php">WE PROMISE, YOU WILL HAVE THE BEST <br> EXPERIENCE</a></h3>
+                    	<h3><a href="services.php">Your Reliable Transportation Service for Disabled   <br> People in Pakistan!</a></h3>
                         <div class="text">
-                        	<p>In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. Maleficia! Vel a modern perhsaps morbi. A terrenti contagium. Forsitan illud Apocalypsi, vel malum poenae horrifying fecimus.</p>
-                            <p>Ut fames cerebro enim carnis, viscera et organa viventium. Sicut spargit virus ad impetum, qui supersumus. Avium, canum, fugere ferae et infecti horrenda monstra. Videmus deformis horrenda daemonum. Panduntur portae inferi. Finis accedens sentio terrore perterritus et taedium. The horror, monstra significant finem. Terror sit unum superesse sentit, ut caro eaters caule nobis.</p>
+                            <p>At Care Wheels, we are committed to providing safe, comfortable, and inclusive transportation services for disabled individuals across Pakistan. We understand that accessibility and convenience are paramount for those with special needs, and that's why our mission is to ensure every journey is smooth, empowering, and enjoyable.</p>
+                            <h3>Your Journey, Your Way:</h3>
+                            <p>We understand that every passenger's needs are unique. That's why we go the extra mile to accommodate specific requests, making your journey as personalized and comfortable as possible. Whether it's a medical appointment, a social event, or a day out, our team is here to cater to your transportation needs with utmost care and professionalism. <br> Join us on this journey towards inclusivity and accessibility. Experience the convenience and warmth of our services, and let Care Wheels be your trusted companion on the road.
+<br>
+Contact us today and let us make your travel experience a memorable one!</p>
                         </div>
-                        <a href="services.php" class="read-more">READ MORE</a>
                     </div>
                 </div>
-                <!--form column-->
-                <div class="form-column col-md-6 col-sm-12 col-xs-12">
-                	<div class="inner-box">
-                    	<!--Default Form-->
-                        <div class="default-form">
-                            <form method="post">
-                            
-                                <div class="row clearfix">
-        
-                                    <!--Form Group-->
-                                    <div class="form-group country col-md-6 col-sm-6 col-xs-12">
-                                        <div class="group-inner">
-                                            <div class="field-label">VEHICLE TYPE</div>
-                                            <select name="category" class="select-number">
-                                                <option>SUV</option>
-                                                <option>SUV 1</option>
-                                                <option>SUV 2</option>
-                                                <option>SUV 3</option>
-                                                <option>SUV 4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-        
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <div class="group-inner">
-                                            <div class="field-label">DEPARTURE DATE</div>
-                                            <input type="text" name="date" class="datepicker" value="" placeholder="Date" required>
-                                        </div>
-                                    </div>
-        
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <div class="group-inner">
-                                            <div class="field-label">PICK UP LOCATION</div>
-                                            <div class="group-inner">
-                                                <select name="country" class="select-number">
-                                                    <option>Select Location</option>
-                                                    <option>Pakistan</option>
-                                                    <option>Australia</option>
-                                                    <option>Canada</option>
-                                                    <option>New Zealand</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <div class="group-inner">
-                                            <div class="field-label">DROP OFF LOCATION</div>
-                                            <div class="group-inner">
-                                                <select name="country" class="select-number">
-                                                    <option>Select Location</option>
-                                                    <option>Pakistan</option>
-                                                    <option>Australia</option>
-                                                    <option>Canada</option>
-                                                    <option>New Zealand</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
+                <!--End Experiance Section-->
+    <div class="faqs-section">
+    	<div class="auto-container">
+            <div class="row clearfix">
+                <!--Accordian Side-->	
+                <div class="accordian-column col-md-12">
+                    
+                    <!--Accordion Box-->
+                    <ul class="accordion-box">
+                        
+                        <!--Block-->
+                        <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-up"></span></div><strong>OUR MISSION: </strong></div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <p>Our mission is to create a more accessible and inclusive society by offering reliable transportation options that cater to the unique needs of disabled individuals. We strive to be the go-to platform for safe and secure transportation services, fostering independence and enhancing the quality of life for our passengers.</p>
+                                    <p><strong>Dedicated to Accessibility:</strong> Our fleet of specially equipped vehicles is designed to accommodate various mobility aids, ensuring a hassle-free boarding experience for wheelchair users and individuals with limited mobility. <br><br>
+ <strong>Trained and Compassionate Drivers: </strong> Our drivers are extensively trained to provide empathetic assistance and prioritize passenger safety and comfort throughout the journey.
+ <strong>Wide Range of Services: </strong> Whether you need a budget-friendly ride, a climate-controlled journey with AC, or a luxurious experience, we offer a range of services tailored to meet your preferences. <br><br>
+ <strong>Reliable and Punctual: </strong> With Care Wheels, you can count on punctuality and timeliness, ensuring you reach your destination on time, every time. <br><br>
+ <strong>Transparent Pricing:</strong> We believe in fair and transparent pricing, with no hidden costs. Your satisfaction is our priority, and we aim to provide excellent value for your money.</p>
+ <p><strong>Accessible Transportation Services Tailored to Your Needs: </strong>
+
+At Care Wheels, we take pride in offering a wide range of transportation services that cater to the diverse requirements of our passengers, especially those with disabilities. Our commitment to accessibility, care, and reliability sets us apart, ensuring you have a seamless and empowering journey every time.</p>   
                                 </div>
-                                
-                                <!--Lower Form Box-->
-                                <div class="lower-form-box">
-                                    <div class="row clearfix">
-                                    
-                                        <div class="form-group col-md-12 col-sm-12 col-xs-12 no-margin">
-                                            <div class="group-inner">
-                                                <div class="input-label">HOW MANY PEOPLES (INCLUDING CHILDREN)?</div>
-                                                <input class="number-of-people" type="text" name="peoples" value="" placeholder="">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                                        
-                                            <div class="select-box">
-                                                <input type="radio" name="hire-group" id="radio-one">
-                                                <label for="radio-one">
-                                                    <span class="default-check"></span>
-                                                    <span class="check-icon fa fa-circle"></span>
-                                                    RETURN
-                                                </label>
-                                            </div>
-                                            
-                                            <div class="select-box">
-                                                <input type="radio" name="hire-group" id="radio-two">
-                                                <label for="radio-two">
-                                                    <span class="default-check"></span>
-                                                    <span class="check-icon fa fa-circle"></span>
-                                                    ONE WAY
-                                                </label>
-                                            </div>
-                                            
-                                        </div>
-    
-                                        <div class="form-group col-md-12 col-sm-12 col-xs-12 text-left">
-                                            <button type="submit" class="theme-btn btn-style-one">BOOK NOW</button>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                
-                            </form>
-                        </div>
-                    	<!--End Default Form-->
-                    </div>
-                </div>
+                            </div>
+                        </li>
+</div> </div></div>
             </div>
         </div>
     </section>
-    <!--End Experiance Section-->
+
     
     <!--Cars Select Section-->
     <section class="cars-select-section style-two">

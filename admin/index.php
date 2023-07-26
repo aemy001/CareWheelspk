@@ -1,4 +1,3 @@
-
 <?php
 ob_start();
 require("connect.php");
@@ -6,7 +5,6 @@ session_start();
 if($_SESSION["a_email"]){
 ?>
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -44,7 +42,7 @@ if($_SESSION["a_email"]){
      <?php
      include 'sidebar.php';
      
-$query = "SELECT * FROM `drivers`";
+$query = "SELECT * FROM `drivers` LIMIT 5";
 $result = mysqli_query($conn,$query);
 
           
@@ -60,8 +58,16 @@ $result = mysqli_query($conn,$query);
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Today Sale</p>
-                                <h6 class="mb-0">$1234</h6>
+                            <?php
+                $query1 = "SELECT * FROM `drivers`";
+
+                $result1 = mysqli_query($conn,$query1);
+
+                $num_count1 = mysqli_num_rows($result1);          
+                 echo "<h3>Total Drivers: " . $num_count1 . "</h3>" ;
+               
+               ?>
+                                
                             </div>
                         </div>
                     </div>
@@ -69,8 +75,15 @@ $result = mysqli_query($conn,$query);
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Sale</p>
-                                <h6 class="mb-0">$1234</h6>
+                            <?php
+                $query2 = "SELECT * FROM `customers_info`";
+
+                $result2 = mysqli_query($conn,$query2);
+
+                $num_count2 = mysqli_num_rows($result2);          
+                 echo "<h3>Total Customers: " . $num_count2 . "</h3>" ;
+               
+               ?>
                             </div>
                         </div>
                     </div>
@@ -78,7 +91,7 @@ $result = mysqli_query($conn,$query);
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Today Revenue</p>
+                                <p class="mb-2">Total Rides</p>
                                 <h6 class="mb-0">$1234</h6>
                             </div>
                         </div>
@@ -97,38 +110,15 @@ $result = mysqli_query($conn,$query);
             <!-- Sale & Revenue End -->
 
 
-            <!-- Sales Chart Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Worldwide Sales</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="worldwide-sales"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Salse & Revenue</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sales Chart End -->
+          
 
 
-            <!-- Recent Sales Start -->
+            <!-- Recent Drivers Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Salse</h6>
-                        <a href="">Show All</a>
+                        <h6 class="mb-0">Recent Drivers</h6>
+                        <a href="drv_req_pending.php">Show All</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -141,9 +131,7 @@ $result = mysqli_query($conn,$query);
                                     <th scope="col">Phone</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Email</th> 
-                                    <th scope="col">Password</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -153,15 +141,13 @@ $result = mysqli_query($conn,$query);
                                      ?>
                                 <tr>
                                     <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><?php echo $row['d_id'];?></td>
                                     <td><?php echo $row['d_fname'];?></td>
                                     <td><?php echo $row['d_lname'];?></td>
                                     <td><?php echo $row['d_phone'];?></td>    
                                     <td><?php echo $row['d_address'];?></td>
                                     <td><?php echo $row['d_email'];?></td>
-                                    <td><?php echo $row['d_password'];?></td>
-                                    <td><?php echo $row['d_status'];?></td>
-                                    <td><a name="approved" id="update" class="btn btn-success" href="driver_update.php?id=<?php echo $row["d_id"]?>" role="button">Update</a>  </td>
-                                    <td><a name="cancelled" id="cancelled" class="btn btn-danger" href="delete_driver.php?id=<?php echo $row["d_id"]?>" role="button">Cancelled</a>  </td>
+                                
                                 </tr>
                                 <?php 
                                       }
@@ -171,129 +157,56 @@ $result = mysqli_query($conn,$query);
                     </div>
                 </div>
             </div>
-            <!-- Recent Sales End -->
-
-
-            <!-- Widgets Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="mb-0">Messages</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Recent Drivers End -->
+            <?php
+            $cquery = "SELECT * FROM `customers_info` LIMIT 5";
+$cresult = mysqli_query($conn,$cquery);
+?>
+ <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Recent Drivers</h6>
+                        <a href="customer_view.php">Show All</a>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div id="calender"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">To Do List</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <input class="form-control bg-dark border-0" type="text" placeholder="Enter task">
-                                <button type="button" class="btn btn-primary ms-2">Add</button>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox" checked>
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span><del>Short task goes here...</del></span>
-                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-white">
+                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Email</th> 
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                     <?php 
+                                          while($row=mysqli_fetch_assoc($cresult))
+                                           {
+                                     ?>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><?php echo $row['c_id'];?></td>
+                                    <td><?php echo $row['c_firstname'];?></td>
+                                    <td><?php echo $row['c_lastname'];?></td>
+                                    <td><?php echo $row['c_phone'];?></td>    
+                                    <td><?php echo $row['c_address'];?></td>
+                                    <td><?php echo $row['c_email'];?></td>
+                                
+                                </tr>
+                                <?php 
+                                      }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <!-- Widgets End -->
+
+            
 
 <?php
 require 'footer.php';

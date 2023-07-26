@@ -13,8 +13,6 @@ if($_SESSION["c_email"]){
 <link href="css/nouislider.pips.css" rel="stylesheet">
 <link rel="stylesheet" href="css/jquery-ui.css">
 <link href="css/style.css" rel="stylesheet">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -49,58 +47,24 @@ include('header.php');
     <!--Billing Section-->
     <section class="billing-section">
     	<div class="auto-container">
-        	<div class="sec-title"><h2>Billing Details</h2></div>
+        	<div class="sec-title"><h2>Schedule your Ride</h2></div>
         	<!--Billing Form-->
             <div class="billing-form">
-            	<form method="post" action="confirmation.php">
+            	<form method="post">
                 	<!--Column-->
                     <div class="row clearfix">
-                    	
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        	<div class="field-label">First Name <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" name="field-name" value="" placeholder="Your First Name"></div>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        	<div class="field-label">Last Name <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" name="field-name" value="" placeholder="Your Last Name"></div>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        	<div class="field-label">Email Address <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" name="field-name" value="" placeholder="Your Email Address"></div>
-                        </div>
-                        
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        	<div class="field-label">Phone <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" name="field-name" value="" placeholder="Your Phone"></div>
-                        </div>
                         
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Date <span class="req">*</span></div>
                             <div class="field-inner"><input type="text" class="datepicker" id="field-one" name="field-name" value="" placeholder="Select the Start Date"><label class="input-icon" for="field-one"><span class="fa fa-calendar"></span></label></div>
                         </div>
                         
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        	<div class="field-label">Drop off Date <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" class="datepicker" id="field-two" name="field-name" value="" placeholder="Select the End Date"><label class="input-icon" for="field-one"><span class="fa fa-calendar"></span></label></div>
-                        </div>
                         
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Select the Timings <span class="req">*</span></div>
                             <div class="field-inner"><input type="text" id="field-three" name="field-name" value="" placeholder="Select the Timings"><label class="input-icon" for="field-three"><span class="fa fa-clock-o"></span></label></div>
                         </div>
                         
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                            <div class="field-label">No of Passengers <span class="req">*</span></div>
-                            <select name="passengers">
-                                <option>Passengers</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div>
                         
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Locations <span class="req">*</span></div>

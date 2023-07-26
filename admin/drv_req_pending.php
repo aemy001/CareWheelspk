@@ -5,7 +5,6 @@ session_start();
 if($_SESSION["a_email"]){
 ?>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>ADMIN</title>
