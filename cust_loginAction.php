@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
       $_SESSION["c_email"] = $row["c_email"]; 
       $_SESSION["c_password"] = $row["c_password"];
       
-        header("location:index.php");
+        header("location:booking.php");
      }
 
      else{

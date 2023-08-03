@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>Zagreb HTML Template | Services</title>
+<title>CareWheels | Services</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
@@ -66,7 +66,7 @@ require('header.php');
                                         </div>
                                      </div>
                                      
-                                    <div class="car-column col-md-3 col-sm-3">
+                                    <div class="car-column col-md-6 col-sm-3">
                                        <!--lower box-->
                                        <div class="lower-box">
                                            <h3><a href="booking.php">BASIC RIDE</a></h3>
@@ -103,7 +103,7 @@ require('header.php');
                                         </div>
                                      </div>
                                      
-                                     <div class="car-column col-md-3 col-sm-3">
+                                     <div class="car-column col-md-6 col-sm-3">
                                         <!--lower box-->
                                         <div class="lower-box">
                                             <h3><a href="booking.php">AC RIDE</a></h3>
@@ -138,7 +138,7 @@ require('header.php');
                                         </div>
                                      </div>
                                      
-                                     <div class="car-column col-md-3 col-sm-3">
+                                     <div class="car-column col-md-6 col-sm-3">
                                         <!--lower box-->
                                         <div class="lower-box">
                                             <h3><a href="booking.php">LUXURY RIDE</a></h3>

@@ -12,7 +12,7 @@
                             <ul class="list-style">
                                 <li><span class="icon flaticon-travel"></span>361 A Napier Street, Knoxville, Newyork  </li>
                                 <li><span class="icon flaticon-technology-1"></span>+091 234 5678</li>
-                                <li><span class="icon flaticon-planet-earth"></span>info@zagreb.com</li>
+                                <li><span class="icon flaticon-planet-earth"></span>carewheels@gmail.com</li>
                             </ul>
                         </div>
                     </div>

@@ -6,13 +6,13 @@ if($_SESSION["c_email"]){
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>Zagreb HTML Template | Book a Car</title>
+<title>Carewheels | Book a Ride</title>
 <!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/nouislider.css" rel="stylesheet">
 <link href="css/nouislider.pips.css" rel="stylesheet">
-<link rel="stylesheet" href="css/jquery-ui.css">
 <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -32,17 +32,25 @@ include('header.php');
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/3.jpg);">
         <div class="auto-container">
-            <h1>Booking</h1>
+            <h1>Book A Ride</h1>
             <div class="bread-crumb-outer">
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.php">Home</a></li>
-                    <li class="active">Booking</li>
+                    <li class="active">Book A Ride</li>
                 </ul>
             </div>
         </div>
     </section>
     <!--End Page Title-->
-    
+
+                           <div class="container">
+                           <h4 class="text-right"><?php echo "Welcome". "<br>"  .$_SESSION['c_firstname'];?>
+            
+                           <br>
+                           <a href="logout.php">Logout</a>
+                       </h4>
+                           </div>
+                       
     
     <!--Billing Section-->
     <section class="billing-section">
@@ -50,90 +58,227 @@ include('header.php');
         	<div class="sec-title"><h2>Schedule your Ride</h2></div>
         	<!--Billing Form-->
             <div class="billing-form">
-            	<form method="post">
+            	<form method="post" action="bookingAction.php">
                 	<!--Column-->
                     <div class="row clearfix">
-                        
+
+                        <!-- Date Time Methods -->
+    <?php
+    $karachiTimezone = new DateTimeZone('Asia/Karachi');
+    $currentDateTime = new DateTime('now', $karachiTimezone);
+    $currentDate = $currentDateTime->format('Y-m-d');
+    $currentTime = $currentDateTime->format('H:i:s');
+    ?>
+                        <!-- For Date -->
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Date <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" class="datepicker" id="field-one" name="field-name" value="" placeholder="Select the Start Date"><label class="input-icon" for="field-one"><span class="fa fa-calendar"></span></label></div>
+                            <div class="field-inner">
+                                <input type="text" class="datepicker" id="field-one" name="selected_date" value="<?php echo $currentDate. PHP_EOL;?>">
+                            <label class="input-icon" for="field-one"><span class="fa fa-calendar"></span></label></div>
                         </div>
-                        
-                        
+    
+                        <!-- For Time -->
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                        	<div class="field-label">Select the Timings <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" id="field-three" name="field-name" value="" placeholder="Select the Timings"><label class="input-icon" for="field-three"><span class="fa fa-clock-o"></span></label></div>
+                        	<div class="field-label">Pickup Timing <span class="req">*</span></div>
+                            <div class="field-inner">
+                            <select name="selected_time" id="timeList" style="display: none;"></select>   
+                            <input type="text" id="picktime" name="pick_time" value="<?php echo $currentTime . PHP_EOL;?>" readonly><label class="input-icon" for="picktime"><span class="fa fa-clock-o"></span></label></div>
                         </div>
-                        
-                        
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Functions
+    function generateTimeOptions() {
+      var select = $('#timeList');
+      var startTime = 0; // Start time in minutes (0 for 00:00)
+      var endTime = 1439; // End time in minutes (1439 for 23:59)
+
+      for (var i = startTime; i <= endTime; i += 10) {
+        var hours = Math.floor(i / 60);
+        var minutes = i % 60;
+
+        var timeString = ("0" + hours).slice(-2) + ":" + ("0" + minutes).slice(-2);
+        var option = '<option value="' + timeString + '">' + timeString + '</option>';
+        select.append(option);
+      }
+    }
+
+    generateTimeOptions();
+
+//Show
+    $('#picktime').on('click', function() {
+      $('#timeList').show();
+    });
+    //change
+    $('#timeList').on('change', function() {
+      var selectedTime = $(this).val();
+      $('#picktime').val(selectedTime);
+      $('#timeList').hide();
+    });
+
+    // Hide the time options 
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('#picktime, #timeList').length) {
+        $('#timeList').hide();
+      }
+    });
+  });
+</script>
+
+                        <!-- For Pickup location -->
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Locations <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" id="field-four" name="field-name" value="" placeholder="Select the Location"><label class="input-icon" for="field-four"><span class="fa fa-map-marker"></span></label></div>
+                            <div class="field-inner"><input type="text" id="pickup_location"  name="pickup" value="" placeholder="Select the pickup Location"><label class="input-icon" for="pickup_location"><span class="fa fa-map-marker"></span></label></div>
                         </div>
-                        
+
+                        <!-- For Dropoff location -->
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
-                            <div class="field-label">Destinations <span class="req">*</span></div>
-                            <select name="destination">
-                                <option>Destination</option>
-                                <option>Location One</option>
-                                <option>Location Two</option>
-                                <option>Location Three</option>
-                                <option>Location Four</option>
+                        	<div class="field-label">Dropoff Locations <span class="req">*</span></div>
+                            <div class="field-inner"><input type="text" id="dropoff_location" name="dropoff" value="" placeholder="Select the dropoff Location"><label class="input-icon" for="dropoff_location"><span class="fa fa-map-marker"></span></label></div>
+                        </div>
+                        <?php
+                    
+
+  $query = "SELECT * FROM `services`";
+  $result = mysqli_query($conn,$query);
+                        ?>
+                        <!-- for service -->
+   <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                        	<div class="field-label">Select Service <span class="req">*</span></div>
+                            <div class="field-inner">
+                            <select name="service" id="service">
+                             <?php
+                                                            while($row=mysqli_fetch_assoc($result))
+                                                            {
+                                                        ?>
+                                                        <option value="<?php echo $row['service_id'];?>"><?php echo $row['service_type'];?></option>
+                                                        <?php
+                                                            }
+                                                        ?>
                             </select>
                         </div>
-                        
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                            <div class="check-box">
-                                <input type="checkbox" id="cbox-one"><label for="cbox-one"><span class="icon"><span class="square"></span><span class="fa fa-check"></span></span> Create an Account?</label>
-                            </div>
                         </div>
-                        
-                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                        	<div class="field-label">Order Note <span class="req">*</span></div>
-                            <div class="field-inner"><textarea name="message" placeholder="Write your Message"></textarea></div>
-                        </div>
+                          <!-- Add a map container -->
+    <div class="col-md-12 col-sm-12 col-xs-12" id="map" style="height: 400px;"></div>
+<p class="form-group col-md-12 col-sm-12 col-xs-12" id="distanceValue"></p>
+    <script>
+    var map;
+    var markers = [];
+
+ // Function to calculate the distance between two points using Haversine formula
+ function calculateDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371; // Radius of the Earth in kilometers
+        const dLat = (lat2 - lat1) * (Math.PI / 180);
+        const dLon = (lon2 - lon1) * (Math.PI / 180);
+        const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const distance = R * c;
+        return distance;
+    }
+    
+    // Function to place markers on the map based on Autocomplete selection
+    function placeMarker(place) {
+        clearMarkers();
+
+        if (!place.geometry) {
+            return;
+        }
+
+        var location = place.geometry.location;
+        var name = place.name;
+        var formattedAddress = place.formatted_address;
+
+        // Create a marker at the selected location
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+
+        // Add the marker to the markers array
+        markers.push(marker);
+
+        // Center the map on the selected location
+        map.setCenter(location);
+
+        // Add an info window to show the location name and address when the marker is clicked
+        var infoWindow = new google.maps.InfoWindow({
+            content: '<strong>' + name + '</strong><br>' + formattedAddress
+        });
+
+        marker.addListener('click', function() {
+            infoWindow.open(map, marker);
+        });
+
+        // If both pickup and dropoff markers are present, calculate the distance
+        if (markers.length === 2) {
+            var pickupLatLng = markers[0].getPosition();
+            var dropoffLatLng = markers[1].getPosition();
+
+            var distance = calculateDistance(
+                pickupLatLng.lat(), pickupLatLng.lng(),
+                dropoffLatLng.lat(), dropoffLatLng.lng()
+            );
+
+            document.getElementById('distanceValue').textContent = distance.toFixed(2);
+        }
+    }
+    // Function to clear existing markers from the map
+    function clearMarkers() {
+        markers.forEach(function(marker) {
+            marker.setMap(null);
+        });
+        markers = [];
+    }
+
+    function initMap() {
+        // Create the map centered at a default location
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 24.927432, lng: 67.033124 }, 
+            zoom: 13
+        });
+
+        // Create Autocomplete objects for pickup and dropoff inputs
+        var pickupInput = document.getElementById('pickup_location');
+        var dropoffInput = document.getElementById('dropoff_location');
+
+        var pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
+        var dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput);
+
+        // Clear markers when inputs are changed
+        pickupInput.addEventListener('input', clearMarkers);
+        dropoffInput.addEventListener('input', clearMarkers);
+
+        // Listen for the place_changed event to add markers based on Autocomplete selection
+        pickupAutocomplete.addListener('place_changed', function() {
+            placeMarker(pickupAutocomplete.getPlace());
+        });
+
+        dropoffAutocomplete.addListener('place_changed', function() {
+            placeMarker(dropoffAutocomplete.getPlace());
+        });
+    }
+
+    function loadMapsApi() {
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSLb1GeobOtI77rC1bMNsaUBPRA4aztvo&libraries=places&callback=initMap';
+        script.defer = true;
+        script.async = true;
+        document.body.appendChild(script);
+    }
+
+    // Load the Maps JavaScript API and initialize the map
+    loadMapsApi();
+</script>
+
+                       
+  <div class="btn-outer col-md-12 text-center"><button type="submit" name="submit" class="theme-btn btn-style-three center">BOOK THE RIDE</button></div>
                         
                     </div>
                 </form>
             </div>
-            
-            <!--Billing Details-->
-            <div class="billing-details">
-            	<div class="row clearfix">
-                
-                	<!--Product Column-->
-                    <div class="product-column col-md-6 col-sm-12 col-xs-12">
-                    	<div class="inner-box">
-                            <h3><a href="car-single.php">Jaguar H-Series</a></h3>
-                        	<div class="image-box">
-                                <figure class="image"><a href="car-single.php"><img src="images/gallery/23.png" alt=""></a></figure>
-                            </div>
-                            <div class="lower-content">
-                                <ul class="info clearfix">
-                                    <li>Price: <span class="price"><strong>$58</strong> / Hour</span></li>
-                                    <li>Price: <span class="price"><strong>$595</strong> / Day</span></li>
-                                </ul>
-                                <div class="btn-outer"><a href="#" class="theme-btn btn-style-three">Rent a Car</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!--Billing Column-->
-                    <div class="billing-column col-md-6 col-sm-12 col-xs-12">
-                    	<div class="inner-box">
-                        	<div class="check-box">
-                                <input type="radio" id="cbox-two" name="billing"><label for="cbox-two"><span class="icon"><span class="square"></span><span class="fa fa-check"></span></span> Check Payment</label>
-                            </div>
-                            <div class="check-box">
-                                <input type="radio" checked id="cbox-three" name="billing"><label for="cbox-three"><span class="icon"><span class="square"></span><span class="fa fa-check"></span></span> Direct Bank Transfer</label>
-                            </div>
-                            <div class="text">The first mate and his Skipper too will do their very best to make the others comfortable in their tropic island nest the powerless in a world of criminals who operate above the law then one day he was shootin at some food and up through the ground came a bubbling is crude oil was shootin at some food and up through the ground came a bubbling is crude.</div>
-                            <div class="check-box">
-                                <input type="radio" id="cbox-four" name="billing"><label for="cbox-four"><span class="icon"><span class="square"></span><span class="fa fa-check"></span></span> Direct Bank Transfer<br><img src="images/icons/credit-card-icon.png" alt=""></label>
-                            </div>
-                            <div class="btn-outer"><button type="button" class="theme-btn btn-style-three">PAY NOW</button></div>
-                        </div>
-                    </div>
                     
                 </div>
             </div>

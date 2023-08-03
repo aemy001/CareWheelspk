@@ -34,7 +34,7 @@
                     <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="drv_req_pending.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Drivers Request</a>
                     <a href="customer_view.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Customer Info</a>
-                    <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Rides Booking</a>
+                    <a href="ridesbook_view.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Rides Booking</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                         <div class="dropdown-menu bg-transparent border-0">

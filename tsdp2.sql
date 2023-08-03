@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2023 at 11:49 PM
+-- Generation Time: Aug 03, 2023 at 01:20 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -52,13 +52,30 @@ CREATE TABLE `booking` (
   `pickup_date` date NOT NULL,
   `pickup_time` time NOT NULL,
   `pickup_location` varchar(55) NOT NULL,
-  `destination` varchar(55) NOT NULL,
+  `dropoff_location` varchar(55) NOT NULL,
   `distance_km` int(11) DEFAULT NULL,
   `c_id` int(11) DEFAULT NULL,
   `d_id` int(11) DEFAULT NULL,
   `service_id` int(11) DEFAULT NULL,
   `v_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`booking_id`, `pickup_date`, `pickup_time`, `pickup_location`, `dropoff_location`, `distance_km`, `c_id`, `d_id`, `service_id`, `v_id`) VALUES
+(1, '2023-08-03', '00:00:00', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 5, NULL, 1, NULL),
+(2, '2023-08-03', '00:00:00', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 5, NULL, 1, NULL),
+(3, '2023-08-03', '00:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 5, NULL, 1, NULL),
+(4, '2023-08-03', '00:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Aisha Bawani Government College, Sindhi Muslim Cooperat', NULL, 5, NULL, 1, NULL),
+(5, '2023-08-03', '00:00:00', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Tariq Road, Pakistan Employees Co-Operative Housing Soc', NULL, 5, NULL, 1, NULL),
+(6, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 5, NULL, 3, NULL),
+(7, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 5, NULL, 3, NULL),
+(8, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 5, NULL, 3, NULL),
+(9, '2023-08-03', '00:00:00', 'ARY Jewellers, Tariq Road, Pakistan Employees Co-Operat', 'Sindh Government Hospital Liaquatabad, Sharifabad Block', NULL, 5, NULL, 1, NULL),
+(10, '2023-08-03', '03:32:20', 'Aptech Computer Education Ajah Centre, Lekki - Epe Expr', 'Hospital Street, D.H.A. Phase 2 Phase 2 Defence Housing', NULL, 5, NULL, 3, NULL),
+(11, '2023-08-03', '03:32:20', 'Aptech Computer Education Ajah Centre, Lekki - Epe Expr', 'Hospital Street, D.H.A. Phase 2 Phase 2 Defence Housing', NULL, 5, NULL, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -250,7 +267,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `customers_info`

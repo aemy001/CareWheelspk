@@ -39,7 +39,7 @@ margin-top: 20px !important;
                      <div class="top-right">
                          <ul class="clearfix">
                              <li><span class="icon flaticon-technology-1"></span>+091 234 5678</li>
-                             <li><span class="icon flaticon-envelope-3"></span>info@carhire.com</li>
+                             <li><span class="icon flaticon-envelope-3"></span>carewheels@gmail.com</li>
                          </ul>
                      </div>
                      
@@ -103,7 +103,7 @@ margin-top: 20px !important;
                                              <li><a href="cust_login.php">Login to Ride</a></li>
                                          </ul>
                                      </li>
-                                     
+                                
                                   </ul>
                              </div>
                          </nav><!-- Main Menu End-->
