@@ -2,14 +2,14 @@
 ob_start();
 require("connect.php");
 session_start();
-if($_SESSION["a_email"]){
+if($_SESSION["d_email"]){
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>ADMIN</title>
+    <title>DRIVER</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -45,29 +45,29 @@ include("sidebar.php");
 
 <?php
 
-$id = $_GET['id'];
+$id = $_GET['booking_id'];
         
-$Dquery = "SELECT * FROM `customers_info` WHERE `c_id` = '$id'";
+$query = "SELECT * FROM `booking` JOIN `customers_info` ON `booking`.`c_id` = `customers_info`.`c_id` JOIN `services` ON `booking`.`service_id`= `services`.`service_id`";
+$result = mysqli_query($conn,$query);
 
-$Dresult = mysqli_query($conn , $Dquery);
-
-$row = mysqli_fetch_row($Dresult);
+$row = mysqli_fetch_row($result);
 
 if(isset($_POST['update']))
 {
- 
- $firstname = $_POST["c_fname"];
- $lastname = $_POST["c_lname"];
- $number = $_POST["c_phone"];
- $address = $_POST["c_address"];
- $email = $_POST["c_email"];
- $password = $_POST["c_password"];
-
- $Rquery = "UPDATE `customers_info` SET `c_firstname`=' $firstname',`c_lastname`=' $lastname',`c_phone`='$number',`c_address`='$address' ,`c_email`='$email',`c_password`='$password' WHERE `c_id` = '$id';";
+ //    $order_id = $_POST['order_id'];
+ $firstname = $_POST["d_fname"];
+ $lastname = $_POST["d_lname"];
+ $number = $_POST["d_phone"];
+ $cnic = $_POST["cnic"];
+ $email = $_POST["d_email"];
+ $address = $_POST["d_address"];
+ $password = $_POST["d_password"];
+$status = $_POST["d_status"];
+ $Rquery = "UPDATE `drivers` SET `d_fname`=' $firstname',`d_lname`=' $lastname',`d_phone`='$number',`CNIC` = '$cnic',`d_email`='$email',`d_address`='$address',`d_password`='$password',`d_status`='$status' WHERE `d_id` = '$id';";
  $Rresult = mysqli_query($conn,$Rquery);
  if($Rresult)
  {
-     header('location:customer_view.php');
+     header('location:driverboard.php');
  }
 
 }
@@ -85,34 +85,43 @@ if(isset($_POST['update']))
 <div class="col-lg-12 col-xl-8">
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Update Form</h6>
-                            <form method="POST">
+                            <form method="POST" action="">
                                 <div class="mb-3">
                                     <label for="" class="form-label">First Name:</label>
-                                    <input type="text" class="form-control" name="c_fname" value="<?php echo $row['1'];?>" id="">
+                                    <input type="text" class="form-control" name="d_fname" value="<?php echo $row['1'];?>" id="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">last Name:</label>
-                                    <input type="text" class="form-control" name="c_lname" value="<?php echo $row['2'];?>" id="">
+                                    <input type="text" class="form-control" name="d_lname" value="<?php echo $row['2'];?>" id="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Phone Number:</label>
-                                    <input type="number" class="form-control" name="c_phone" value="<?php echo $row['3'];?>" id="">
+                                    <input type="number" class="form-control" name="d_phone" value="<?php echo $row['3'];?>" id="">
                                 </div>
-                              
                                 <div class="mb-3">
-                                    <label for="" class="form-label">Address:</label>
-                                    <input type="text" class="form-control" name="c_address" value="<?php echo $row['4'];?>" id="">
+                                    <label for="" class="form-label">Cnic No:</label>
+                                    <input type="number" class="form-control" name="cnic" value="<?php echo $row['4'];?>" id="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Email:</label>
-                                    <input type="email" class="form-control" name="c_email" value="<?php echo $row['5'];?>" id="">
+                                    <input type="email" class="form-control" name="d_email" value="<?php echo $row['5'];?>" id="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Address:</label>
+                                    <input type="text" class="form-control" name="d_address" value="<?php echo $row['6'];?>" id="">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Password:</label>
-                                    <input type="password" class="form-control" name="c_password" value="<?php echo $row['6'];?>" id="">
+                                    <input type="password" class="form-control" name="d_password" value="<?php echo $row['7'];?>" id="">
                                 </div>
-                               
-                                <button type="submit" name="update" class="btn btn-primary">Update Customer</button>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Status:</label>
+                                    <select name="d_status" value="<?php echo $row['8'];?>" id="">
+                                     <option value="Approved">Approved</option>
+                                     <option value="cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+                                <button type="submit" name="update" class="btn btn-primary">Update Driver</button>
                             </form>
                         </div>
                     </div>

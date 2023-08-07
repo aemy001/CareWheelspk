@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 03, 2023 at 01:20 AM
+-- Generation Time: Aug 07, 2023 at 04:41 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -54,28 +54,25 @@ CREATE TABLE `booking` (
   `pickup_location` varchar(55) NOT NULL,
   `dropoff_location` varchar(55) NOT NULL,
   `distance_km` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
   `c_id` int(11) DEFAULT NULL,
   `d_id` int(11) DEFAULT NULL,
   `service_id` int(11) DEFAULT NULL,
-  `v_id` int(11) DEFAULT NULL
+  `v_id` int(11) DEFAULT NULL,
+  `status` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `booking`
 --
 
-INSERT INTO `booking` (`booking_id`, `pickup_date`, `pickup_time`, `pickup_location`, `dropoff_location`, `distance_km`, `c_id`, `d_id`, `service_id`, `v_id`) VALUES
-(1, '2023-08-03', '00:00:00', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 5, NULL, 1, NULL),
-(2, '2023-08-03', '00:00:00', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 5, NULL, 1, NULL),
-(3, '2023-08-03', '00:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 5, NULL, 1, NULL),
-(4, '2023-08-03', '00:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Aisha Bawani Government College, Sindhi Muslim Cooperat', NULL, 5, NULL, 1, NULL),
-(5, '2023-08-03', '00:00:00', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Tariq Road, Pakistan Employees Co-Operative Housing Soc', NULL, 5, NULL, 1, NULL),
-(6, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 5, NULL, 3, NULL),
-(7, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 5, NULL, 3, NULL),
-(8, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 5, NULL, 3, NULL),
-(9, '2023-08-03', '00:00:00', 'ARY Jewellers, Tariq Road, Pakistan Employees Co-Operat', 'Sindh Government Hospital Liaquatabad, Sharifabad Block', NULL, 5, NULL, 1, NULL),
-(10, '2023-08-03', '03:32:20', 'Aptech Computer Education Ajah Centre, Lekki - Epe Expr', 'Hospital Street, D.H.A. Phase 2 Phase 2 Defence Housing', NULL, 5, NULL, 3, NULL),
-(11, '2023-08-03', '03:32:20', 'Aptech Computer Education Ajah Centre, Lekki - Epe Expr', 'Hospital Street, D.H.A. Phase 2 Phase 2 Defence Housing', NULL, 5, NULL, 3, NULL);
+INSERT INTO `booking` (`booking_id`, `pickup_date`, `pickup_time`, `pickup_location`, `dropoff_location`, `distance_km`, `price`, `c_id`, `d_id`, `service_id`, `v_id`, `status`) VALUES
+(6, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 600, 5, 23, 3, NULL, 'Started'),
+(7, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, NULL, 5, NULL, 3, NULL, NULL),
+(8, '2023-08-03', '01:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, NULL, 5, NULL, 3, NULL, NULL),
+(10, '2023-08-03', '03:32:20', 'Aptech Computer Education Ajah Centre, Lekki - Epe Expr', 'Hospital Street, D.H.A. Phase 2 Phase 2 Defence Housing', NULL, NULL, 5, NULL, 3, NULL, NULL),
+(11, '2023-08-03', '03:32:20', 'Aptech Computer Education Ajah Centre, Lekki - Epe Expr', 'Hospital Street, D.H.A. Phase 2 Phase 2 Defence Housing', NULL, NULL, 5, NULL, 3, NULL, NULL),
+(12, '2023-08-09', '07:27:59', 'Ayesha Manzil Pedestrian Crosssing, F.B Area Block 6 Bl', 'Ziauddin Hospital, Shahrah-e-Ghalib Road, Block 6 Clift', NULL, NULL, 5, NULL, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -131,7 +128,8 @@ INSERT INTO `drivers` (`d_id`, `d_fname`, `d_lname`, `d_phone`, `CNIC`, `d_email
 (18, 'Arijit', 'Singh', 3111000001, 4210110101010, 'arijit@gmail.com', 'gulberg', '12345', 'Pending'),
 (20, 'Hamdan', 'Ali', 3020202022, 4210118181811, 'hamdan@gmail.com', 'garden', '12345', 'Pending'),
 (21, ' Hamza', ' Farjad', 20139876543, 2013987654321, 'hamza@gmail.com', 'gulberg', '12345', 'Approved'),
-(22, 'Khushhal', 'Rajpoot', 30981675432, 3098167543210, 'baigzoha02@gmail.com', 'DHA', '12345', 'Pending');
+(22, 'Khushhal', 'Rajpoot', 30981675432, 3098167543210, 'baigzoha02@gmail.com', 'DHA', '12345', 'Pending'),
+(23, 'Ian', 'Somerhalder', 3000127354, 4222222222222, 'aimonjawed1289@gmail.com', 'Clifton', '12345', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -195,7 +193,8 @@ CREATE TABLE `vehicles` (
 INSERT INTO `vehicles` (`v_id`, `v_name`, `v_model`, `v_year`, `v_capacity`, `v_regNum`, `d_id`, `v_drv_img`, `v_cert_img`, `v_img`, `v_drv_lic`) VALUES
 (1, 'toyota', 'vigo', 2020, 3, 'Y-123', 0, NULL, NULL, NULL, NULL),
 (7, 'toyota', 'HiLux Vigo', 2018, 3, 'Y-121', 21, 'glasses.jpg', NULL, NULL, NULL),
-(8, 'Demers', 'Yellow Type 2', 2018, 2, 'C-543', 22, 'glasses.jpg', 'Aviator.png', '2_HeroDesktop_1920x800.jpg', 'glasses.jpg');
+(8, 'Demers', 'Yellow Type 2', 2018, 2, 'C-543', 22, 'glasses.jpg', 'Aviator.png', '2_HeroDesktop_1920x800.jpg', 'glasses.jpg'),
+(9, 'Demers', 'HiLux Vigo', 2018, 2, 'C-545', 23, 'driver.jpg', 'Smart-Card-Vehicle-Registration.jpg', 'download.jpg', 'license.jpg');
 
 --
 -- Indexes for dumped tables
@@ -267,7 +266,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `customers_info`
@@ -279,7 +278,7 @@ ALTER TABLE `customers_info`
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -297,7 +296,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

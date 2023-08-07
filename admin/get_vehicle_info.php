@@ -106,15 +106,17 @@ $row = mysqli_fetch_assoc($vresult);
 }
 }
 ?>
+
 <form action="d_approvalAction.php" method="post">
 <div class="d-flex justify-content-center">
-<a
+<a type="submit"
     name="submit"
     class="btn btn-danger"
-    href="d_approvalAction.php?d_id=<?php echo $row["d_id"]; ?>"
+    href="d_approvalAction.php?d_id=<?php echo $row["d_id"];?>"
     role="button"
   >Approve this Driver</a> 
 </div>
+
 </form>
 
      

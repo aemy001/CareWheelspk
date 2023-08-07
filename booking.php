@@ -47,7 +47,7 @@ include('header.php');
                            <h4 class="text-right"><?php echo "Welcome". "<br>"  .$_SESSION['c_firstname'];?>
             
                            <br>
-                           <a href="logout.php">Logout</a>
+                           <a href="cust_logout.php">Logout</a>
                        </h4>
                            </div>
                        
@@ -70,15 +70,16 @@ include('header.php');
     $currentTime = $currentDateTime->format('H:i:s');
     ?>
                         <!-- For Date -->
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Date <span class="req">*</span></div>
                             <div class="field-inner">
-                                <input type="text" class="datepicker" id="field-one" name="selected_date" value="<?php echo $currentDate. PHP_EOL;?>">
+                                <input type="date" name="selected_date" pattern="\d{4}-\d{2}-\d{2}">
+                                <input type="text" class="" id="field-one" name="current_date" value="<?php echo $currentDate. PHP_EOL;?>">
                             <label class="input-icon" for="field-one"><span class="fa fa-calendar"></span></label></div>
                         </div>
     
                         <!-- For Time -->
-                        <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Timing <span class="req">*</span></div>
                             <div class="field-inner">
                             <select name="selected_time" id="timeList" style="display: none;"></select>   
@@ -263,7 +264,7 @@ include('header.php');
 
     function loadMapsApi() {
         var script = document.createElement('script');
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSLb1GeobOtI77rC1bMNsaUBPRA4aztvo&libraries=places&callback=initMap';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap';
         script.defer = true;
         script.async = true;
         document.body.appendChild(script);
@@ -274,7 +275,7 @@ include('header.php');
 </script>
 
                        
-  <div class="btn-outer col-md-12 text-center"><button type="submit" name="submit" class="theme-btn btn-style-three center">BOOK THE RIDE</button></div>
+  <div class="btn-outer col-md-12 text-center"><button type="submit" name="submit" class="theme-btn btn-style-three center">FIND RIDER</button></div>
                         
                     </div>
                 </form>

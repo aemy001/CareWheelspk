@@ -68,7 +68,7 @@ if (isset($_GET['d_id'])) {
                                 <div class="col-sm-6 form-group">
                                     <label  for="">VEHICLE BRAND:</label>
                                     <input type="hidden" name="d_id" value="<?php echo $d_id;?>" />
-                                    <input type="text" name="v_name" placeholder="Enter Brand Name *" required>
+                                    <input type="text" name="v_name"  placeholder="Enter Brand Name *" required>
                                 </div>
                                 
                                 <div class="col-sm-6 form-group">
@@ -93,20 +93,20 @@ if (isset($_GET['d_id'])) {
 
                                 <div class="col-sm-12 form-group">
                                 <label  for="">UPLOAD YOUR IMAGE:</label>
-                                    <input type="file" name="v_drv_img" required>
+                                    <input type="file" name="v_drv_img" accept="image/png, image/jpg, image/jpeg" required>
                                 </div>
                                 <div class="col-sm-12 form-group">
                                 <label  for="">UPLOAD YOUR CERTIFICATE OF VEHICLE REGISTRATION:</label>
-                                    <input type="file" name="v_cert_img" required>
+                                    <input type="file" name="v_cert_img" accept="image/png, image/jpg, image/jpeg" required>
                                 </div>
                                 <div class="col-sm-12 form-group">
                                 <label  for="">UPLOAD YOUR VEHICLE IMAGE:</label>
-                                    <input type="file" name="v_img" required>
+                                    <input type="file" name="v_img" accept="image/png, image/jpg, image/jpeg" required>
                                 </div>
                                
                                 <div class="col-sm-12 form-group">
                                 <label  for="">UPLOAD YOUR DRIVER'S LICENSE:</label>
-                                    <input type="file" name="v_drv_lic" required>
+                                    <input type="file" name="v_drv_lic" accept="image/png, image/jpg, image/jpeg" required>
                                 </div>
 
                                 

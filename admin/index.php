@@ -42,7 +42,7 @@ if($_SESSION["a_email"]){
      <?php
      include 'sidebar.php';
      
-$query = "SELECT * FROM `drivers` LIMIT 5";
+$query = "SELECT * FROM `drivers` ORDER BY `d_id` DESC LIMIT 5";
 $result = mysqli_query($conn,$query);
 
           
@@ -100,8 +100,15 @@ $result = mysqli_query($conn,$query);
                         <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-pie fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
+                            <?php
+                $query3 = "SELECT * FROM `booking`";
+
+                $result3 = mysqli_query($conn,$query3);
+
+                $num_count3 = mysqli_num_rows($result3);          
+                 echo "<h3>Ride Requests: " . $num_count3 . "</h3>" ;
+               
+               ?>
                             </div>
                         </div>
                     </div>
@@ -159,7 +166,7 @@ $result = mysqli_query($conn,$query);
             </div>
             <!-- Recent Drivers End -->
             <?php
-            $cquery = "SELECT * FROM `customers_info` LIMIT 5";
+            $cquery = "SELECT * FROM `customers_info` ORDER BY `c_id` DESC LIMIT 5";
 $cresult = mysqli_query($conn,$cquery);
 ?>
  <div class="container-fluid pt-4 px-4">
