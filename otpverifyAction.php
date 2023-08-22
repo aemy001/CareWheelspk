@@ -19,12 +19,12 @@ if(isset($_POST["submit"])){
        
 
 
-    $insert = "INSERT INTO `customers_info`( `c_firstname`, `c_lastname`, `c_phone`, `c_address`, `c_email`, `c_password`) VALUES ('$firstname','$lastname','$number','$address','$email','$password')";
+    $insert = "INSERT INTO `customers_info`( `c_firstname`, `c_lastname`, `c_phone`, `c_address`, `c_email`, `c_password`) VALUES ('$firstname','$lastname','$number','$address','$email','".md5($password)."')";
 
      $deliver = mysqli_query($conn , $insert);
 
      if($deliver){
-header("location:index.php");
+header("location:cust_login.php");
     }
     }
 }

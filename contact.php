@@ -1,7 +1,10 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>Zagreb HTML Template | Contact Us</title>
+<title>CareWheels| Contact Us</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -21,6 +24,7 @@
  	
     <?php
     require('header.php');
+    include ("connect.php");
     
     ?>
     <!--Page Title-->
@@ -68,10 +72,28 @@
                         </div>
                     </section>
                     <ul class="contact-info">
-                    	<li><span class="icon flaticon-technology-1"></span> +091 234 5678</li>
-                        <li><span class="icon flaticon-envelope"></span> info@zagreb.com</li>
+                    	<li><span class="icon flaticon-technology-1"></span>+091 234 5678</li>
+                        <li><span class="icon flaticon-envelope"></span>carewheels@gmail.com</li>
                     </ul>
                 </div>
+
+
+                <?php
+
+if(isset($_POST["submit"])){
+    $name = $_POST["username"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+
+    $query = "INSERT INTO `contact`(`name`, `email`, `subject`, `message`) VALUES ('$name','$email','$subject','$message')";
+    $result = mysqli_query($conn ,$query);
+    if($result){
+        echo "<script>alert('Thank you for reaching out! Our team will be in touch with you shortly. ')</script>";
+    }
+}
+
+?>
                 
                 <!--Form Column-->	
                 <div class="form-column column col-lg-7 col-md-7 col-sm-12 col-xs-12">
@@ -80,29 +102,29 @@
                     <div class="contact-form">
                     	<div class="group-title">
                         	<h3>DROP US A LINE</h3>
-                            <div class="text">Sicut malus voodoo. Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Qui tardius moveri, sed in magna copia sint terribiles legionis.</div>
+                            <div class="text">Have questions or need assistance? Don't hesitate to contact us; we're here to help you 24/7.</div>
                         </div>
                         <!--Contact Form-->
-                        <form method="post" action="sendemail.php" id="contact-form">
+                        <form method="POST" action="" id="contact-form">
                             <div class="row clearfix">
                                 <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                    <input type="text" name="username" placeholder="Name *">
+                                    <input type="text" name="username" placeholder="Name *" required>
                                 </div>
                                 
                                 <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                                    <input type="email" name="email" placeholder="Email *">
+                                    <input type="email" name="email" placeholder="Email *" required>
                                 </div>
                                 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <input type="text" name="subject" placeholder="Subject *">
+                                    <input type="text" name="subject" placeholder="Subject *" required>
                                 </div>
                                 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <textarea name="message" placeholder="Message"></textarea>
+                                    <textarea name="message" placeholder="Message" required></textarea>
                                 </div>
                                 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form">SUBMIT</button>
+                                    <button class="theme-btn btn-style-one" type="submit" name="submit">SUBMIT</button>
                                 </div>
                                 
                             </div>

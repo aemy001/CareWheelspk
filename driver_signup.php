@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>Driver Sign Up</title>
+<title> CareWheels | Sign Up To Drive</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -29,13 +29,13 @@
     
     ?>
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/main-slider/image-2.jpg); background-size:cover; background-repeat:no-repeat;">
+    <section class="page-title" style="background-image:url(images/gallery/9.jpg); background-size:cover; background-repeat:no-repeat;">
         <div class="auto-container">
-            <h1>SIGN UP</h1>
+            <h1>SIGN UP TO DRIVE</h1>
             <div class="bread-crumb-outer">
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.php">Home</a></li>
-                    <li class="active">Sign Up</li>
+                    <li class="active">Sign Up To Drive</li>
                 </ul>
             </div>
         </div>
@@ -86,38 +86,45 @@
                     	<div class="group-title">
                         	
                         <!--Contact Form-->
-                       <form method="post" action="drv_signupAction.php" id="contact-form">
+                       <form method="post" action="driver_signupAction.php" id="contact-form" onsubmit="return formValidateR()">
                             <div class="row clearfix">
                                 <div class="col-sm-6 form-group">
                                     <label  for="">FIRST NAME:</label>
-                                    <input type="text" name="d_fname" placeholder="Enter First Name *" required>
+                                    <input type="text" name="d_fname" id="fname" placeholder="Enter First Name *" required>
+                                    <span id="fnamee"></span>
                                 </div>
                                 
                                 <div class="col-sm-6 form-group">
                                     <label  for="">LAST NAME:</label>
-                                    <input type="text" name="d_lname" placeholder="Enter Last Name *" required>
+                                    <input type="text" name="d_lname" id="lname" placeholder="Enter Last Name *" required>
+                                    <span id="lnamee"></span>
                                 </div>
                                 
                                 <div class="col-sm-12 form-group">
                                     <label for="">NUMBER:</label>
-                                    <input type="tel" name="d_phone" placeholder="Enter Phone Number *" required>
+                                    <input type="tel" name="d_phone" id="num" placeholder="Enter Phone Number *" required>
+                                    <span id="unum"></span>
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <label  for="">CNIC no:</label>
-                                    <input type="tel" name="cnic" placeholder="Enter CNIC *" required>
+                                    <input type="tel" name="cnic" id="cnic" placeholder="Enter CNIC *" required>
+                                    <span id="ncnic"></span>
                                 </div>
                                 <div class="col-sm-12 form-group">
                                 <label  for="">EMAIL:</label>
-                                    <input type="email" name="d_email" placeholder="Enter Email *" required>
+                                    <input type="email" name="d_email" id="email" placeholder="Enter Email *" required>
+                                    <span id="emaill"></span>
                                 </div>
 
                                 <div class="col-sm-12 form-group">
                                 <label  for="">ADDRESS:</label>
-                                    <input type="text" name="d_address" placeholder="Enter Address *" required></div>
+                                    <input type="text" name="d_address" id="address" placeholder="Enter Address *" required>
+                                    <span id="addresss"></span></div>
 
                                 <div class="col-sm-12 form-group">
                                 <label  for="">PASSWORD:</label>
-                                    <input type="password" name="d_password" placeholder="Enter Password *" required>
+                                    <input type="password" name="d_password" id="password" placeholder="Enter Password *" required>
+                                    <span id="passwordd"></span>
                                 </div>
 
                                 
@@ -127,6 +134,86 @@
                                 
                             </div>
                         </form>
+                        <div class="text-center login">Already have an account? <a href="driver_login.php" style="color: green;">Log in</a></div>
+    <script>
+            function formValidateR() {
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var num = document.getElementById("num").value;
+                var cnic = document.getElementById("cnic").value;
+                var email = document.getElementById("email").value;
+                var address = document.getElementById("address").value;
+                var password = document.getElementById("password").value;
+            
+                if (fname == "") {
+                    document.getElementById("fnamee").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+               else if (!isNaN(fname)) {
+                    document.getElementById("fnamee").innerHTML = "*Number is not allowed";
+                    return false;
+                }
+                else if (lname == "") {
+                    document.getElementById("fnamee").innerHTML = "";
+                    document.getElementById("lnamee").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+                else if (!isNaN(lname)) {
+                    document.getElementById("lnamee").innerHTML = "*Number is not allowed";
+                    return false;
+                }
+                else if (num == "") {
+                    document.getElementById("lnamee").innerHTML = "";
+                    document.getElementById("unum").innerHTML = "*Enter number";
+                    return false;
+                }
+               else if (num.length <= 10) {
+                    document.getElementById("unum").innerHTML = "*Enter Valid Number";
+                    return false;
+                }
+               else if (num.length >= 12) {
+                    document.getElementById("unum").innerHTML = "*Enter Valid Number";
+                    return false;
+                }
+                else if (cnic == "") {
+                    document.getElementById("unum").innerHTML = "";
+                    document.getElementById("ncnic").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+                else if (cnic.length >= 14) {
+                    document.getElementById("ncnic").innerHTML = "*Enter Valid Number";
+                    return false;
+                }
+               else if (email == "") {
+                    document.getElementById("ncnic").innerHTML = "";
+                    document.getElementById("emaill").innerHTML = "*Enter email";
+                    return false;
+                }
+               else if (email.length <= 3) {
+                    document.getElementById("emaill").innerHTML = "*Email should not be less than three characters";
+                    return false;
+                }
+               else if (email.indexOf("@") <= 0) {
+                    document.getElementById("emaill").innerHTML = "*Please enter correct format";
+                    return false;
+                }
+                else if (address == "") {
+                    document.getElementById("emaill").innerHTML = "";
+                    document.getElementById("addresss").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+                else if (password == "") {
+                    document.getElementById("addresss").innerHTML = "";
+                     document.getElementById("passwordd").innerHTML = "*Enter Password";
+                     return false;
+                 }
+               else if (password.length <= 4) {
+                    document.getElementById("passwordd").innerHTML = "*Password is to short";
+                    return false;
+                }
+              
+            }
+        </script>
                     </div>
                     <!--End Contact Form -->
                     

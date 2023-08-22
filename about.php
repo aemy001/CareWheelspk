@@ -22,7 +22,7 @@
 <div class="page-wrapper">
  	
     <?php
-    require('header.php');
+    include('header.php');
     ?>
     
     <!--Page Title-->
@@ -250,7 +250,7 @@ At Care Wheels, we take pride in offering a wide range of transportation service
     <!--sponsors style-->
     
     <?php
-require('footer.php');
+include('footer.php');
 ?>
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>

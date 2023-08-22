@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+<h2>Verify By Entering the OTP you recieved on your mail</h2>
     <form action="otpverifyAction.php" method="POST">
     <input type="number" name="ottpuser" min=101 max="201">
     <br>

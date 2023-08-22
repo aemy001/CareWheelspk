@@ -45,31 +45,22 @@ if($_SESSION["a_email"]){
 <div class="page-wrapper">
 <?php
 include('sidebar.php');
-$query = "SELECT * FROM drivers JOIN vehicles ON drivers.d_id = vehicles.d_id";
+$query = "SELECT * FROM feedback";
 $result = mysqli_query($conn,$query);        
-      
+
       ?>
-      <h3 class="container row justify-content-center">DRIVERS INFO</h3>
+      <h3 class="container row justify-content-center">Customer's Ride Feedback</h3>
       <br>
-    
 <table class="table table-dark table-hover">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Cnic No</th>
-      <th scope="col">Address</th>
-      <th scope="col">Email</th> 
-      <th scope="col">Password</th>
-      <th scope="col">Status</th>
-      <th scope="col">Vehicle Info</th>
-      <th scope="col-lg-3">Action</th>
+      <th scope="col">Ratings</th>
+      <th scope="col">Comments</th>
+      <th scope="col">Booking ID</th>
     </tr>
   </thead>
 
- 
   <tbody>
   <?php 
      while($row=mysqli_fetch_assoc($result))
@@ -77,22 +68,10 @@ $result = mysqli_query($conn,$query);
        ?>
     <tr>
    
-      <th scope="row"><?php echo $row['d_id'];?></th>
-      <td><?php echo $row['d_fname'];?></td>
-      <td><?php echo $row['d_lname'];?></td>
-      <td><?php echo $row['d_phone'];?></td>    
-      <td><?php echo $row['CNIC'];?></td>  
-      <td><?php echo $row['d_address'];?></td>
-      <td><?php echo $row['d_email'];?></td>
-      <td><?php echo $row['d_password'];?></td>
-      <td><button class = "btn btn-success"><?php echo $row['d_status'];?></button></td>
-      <td>  
-       <button class="btn btn-secondary"> <a name="checkVinfo" id="checkVinfo" 
-        class="btn btn-link btn-open-vehicle-modal" 
-        href="get_vehicle_info.php?d_id=<?php echo $row["d_id"]; ?>" 
-        role="button">Check vehicle info</a></button></td>
-      <td>  <a name="approved" id="update" class="btn btn-success" href="driver_update.php?id=<?php echo $row["d_id"]?>" role="button">Update</a>  </td>
-      <td>  <a name="delete" id="delete" class="btn btn-danger" href="delete_driver.php?id=<?php echo $row["d_id"]?>" role="button">Delete</a>  </td>
+      <th scope="row"><?php echo $row['feedback_id'];?></th>
+      <td><?php echo $row['ratings'];?></td>
+      <td><?php echo $row['comment'];?></td>
+      <td><?php echo $row['booking_id'];?></td>
     
     </tr>
     <?php 

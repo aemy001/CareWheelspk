@@ -1,7 +1,7 @@
 <?php
 ob_start();
-session_start();
 include("connect.php");
+session_start();
 if($_SESSION["d_email"]){
 ?>
 <!DOCTYPE html>
@@ -43,71 +43,7 @@ if($_SESSION["d_email"]){
      include 'sidebar.php';      
       
       ?>
-
-            <!-- Sale & Revenue Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-               
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                            <?php
- 
-$sql1 = "SELECT SUM(price) AS total_earnings FROM booking";
-
-$result1 = mysqli_query($conn,$sql1);
-if ($result1) {
-  $row = mysqli_fetch_assoc($result1);
-  $totalSum = $row["total_earnings"];
-} else {
-  $totalSum = 0; 
-}
-
-echo "<h3>Total Earnings:<br> Rs." . $totalSum . "</h3>";
-?>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                            <?php
-                $sql2 = "SELECT * FROM `booking`";
-
-                $result2 = mysqli_query($conn,$sql2);
-
-                $num_count2 = mysqli_num_rows($result2);          
-                 echo "<h3>Ride Requests: " . $num_count2 . "</h3>" ;
-               
-               ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                            <?php
- 
-$sql3 = "SELECT * FROM `booking` WHERE `status` = 'Cancelled'";
-
-$result3 = mysqli_query($conn,$sql3);
-$num_count3 = mysqli_num_rows($result3); 
-
-echo "<h3>Rides Cancelled: " . $num_count3 . "</h3>";
-?>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br><br>
-            <!-- Sale & Revenue End -->
-            <div class="d-md-flex justify-content-center mb-2 mt-1 ms-4"><h2>Rides Requests</h2></div> 
+            <div class="d-md-flex justify-content-center mb-2 mt-1 ms-4"><h2>My Rides</h2></div> 
 <table class="table table-dark table-hover">
   <thead>
     <tr>
@@ -120,15 +56,15 @@ echo "<h3>Rides Cancelled: " . $num_count3 . "</h3>";
       <th scope="col">Dropoff Location</th> 
       <th scope="col">Service Type</th> 
       <th scope="col">Status</th>
-      <th scope="col">Manage Ride</th>
+      <th scope="col">Price</th>
     </tr>
   </thead>
 
  
   <tbody>
   <?php 
-
-  $bquery = "SELECT * FROM `booking` JOIN `customers_info` ON `booking`.`c_id` = `customers_info`.`c_id` JOIN `services` ON `booking`.`service_id`= `services`.`service_id` WHERE `d_id` IS NULL ORDER BY `booking_id` DESC";
+$d_id = $_SESSION["d_id"];
+  $bquery = "SELECT * FROM `booking` JOIN `customers_info` ON `booking`.`c_id` = `customers_info`.`c_id` JOIN `services` ON `booking`.`service_id`= `services`.`service_id` WHERE `d_id` = '$d_id'";
   $bresult = mysqli_query($conn,$bquery);
      while($row=mysqli_fetch_assoc($bresult))
      {
@@ -144,9 +80,8 @@ echo "<h3>Rides Cancelled: " . $num_count3 . "</h3>";
       <td><?php echo $row['dropoff_location'];?></td>
       <td><?php echo $row['service_type'];?></td>
       <td><?php echo $row['status'];?></td>
+      <td><?php echo $row['price'];?></td>
       <input type="hidden" name="d_id" value="<?php echo $_SESSION['d_id']; ?>">
-      <td>  <a name="submit" id="manage" class="btn btn-success" href="managerides.php?id=<?php echo $row["booking_id"];?>" role="button">Manage</a>  </td>
-
     </tr>
     <?php 
      }

@@ -1,6 +1,6 @@
 <?php
-require ('connect.php');
 session_start();
+include('connect.php');
 if($_SESSION["c_email"]){
 ?>
 <!DOCTYPE html>
@@ -44,9 +44,11 @@ include('header.php');
     <!--End Page Title-->
 
                            <div class="container">
-                           <h4 class="text-right"><?php echo "Welcome". "<br>"  .$_SESSION['c_firstname'];?>
+                           <h4 class="text-right"><?php echo "<b>". "Welcome!". "</b>". "<br>"  .$_SESSION['c_firstname'];?>
             
-                           <br>
+                           <br> <br>
+                           <strong?>    <a class="link-success" href="cust_profile.php?u_id=<?php echo $_SESSION["c_id"]; ?>">Show Profile</a>
+</strong> <br>
                            <a href="cust_logout.php">Logout</a>
                        </h4>
                            </div>
@@ -66,15 +68,16 @@ include('header.php');
     <?php
     $karachiTimezone = new DateTimeZone('Asia/Karachi');
     $currentDateTime = new DateTime('now', $karachiTimezone);
-    $currentDate = $currentDateTime->format('Y-m-d');
-    $currentTime = $currentDateTime->format('H:i:s');
+        $currentDate = $currentDateTime->format('Y-m-d');
+        $currentTime = $currentDateTime->format('H:i:s');
+   
     ?>
                         <!-- For Date -->
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Date <span class="req">*</span></div>
                             <div class="field-inner">
                                 <input type="date" name="selected_date" pattern="\d{4}-\d{2}-\d{2}">
-                                <input type="text" class="" id="field-one" name="current_date" value="<?php echo $currentDate. PHP_EOL;?>">
+                                <input type="text" class="" id="field-one" name="current_date" value="<?php echo $currentDate. PHP_EOL; ?>">
                             <label class="input-icon" for="field-one"><span class="fa fa-calendar"></span></label></div>
                         </div>
     
@@ -129,13 +132,13 @@ include('header.php');
                         <!-- For Pickup location -->
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Pickup Locations <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" id="pickup_location"  name="pickup" value="" placeholder="Select the pickup Location"><label class="input-icon" for="pickup_location"><span class="fa fa-map-marker"></span></label></div>
+                            <div class="field-inner"><input type="text" id="pickup_location"  name="pickup" value="" placeholder="Select the pickup Location" required><label class="input-icon" for="pickup_location"><span class="fa fa-map-marker"></span></label></div>
                         </div>
 
                         <!-- For Dropoff location -->
                         <div class="form-group col-md-6 col-sm-12 col-xs-12">
                         	<div class="field-label">Dropoff Locations <span class="req">*</span></div>
-                            <div class="field-inner"><input type="text" id="dropoff_location" name="dropoff" value="" placeholder="Select the dropoff Location"><label class="input-icon" for="dropoff_location"><span class="fa fa-map-marker"></span></label></div>
+                            <div class="field-inner"><input type="text" id="dropoff_location" name="dropoff" value="" placeholder="Select the dropoff Location" required><label class="input-icon" for="dropoff_location"><span class="fa fa-map-marker"></span></label></div>
                         </div>
                         <?php
                     
@@ -166,19 +169,19 @@ include('header.php');
     var map;
     var markers = [];
 
- // Function to calculate the distance between two points using Haversine formula
- function calculateDistance(lat1, lon1, lat2, lon2) {
-        const R = 6371; // Radius of the Earth in kilometers
-        const dLat = (lat2 - lat1) * (Math.PI / 180);
-        const dLon = (lon2 - lon1) * (Math.PI / 180);
-        const a =
-            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
-            Math.sin(dLon / 2) * Math.sin(dLon / 2);
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        const distance = R * c;
-        return distance;
-    }
+
+//  function calculateDistance(lat1, lon1, lat2, lon2) {
+//         const R = 6371; // Radius of the Earth in kilometers
+//         const dLat = (lat2 - lat1) * (Math.PI / 180);
+//         const dLon = (lon2 - lon1) * (Math.PI / 180);
+//         const a =
+//             Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+//             Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+//             Math.sin(dLon / 2) * Math.sin(dLon / 2);
+//         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+//         const distance = R * c;
+//         return distance;
+//     }
     
     // Function to place markers on the map based on Autocomplete selection
     function placeMarker(place) {
@@ -214,17 +217,17 @@ include('header.php');
         });
 
         // If both pickup and dropoff markers are present, calculate the distance
-        if (markers.length === 2) {
-            var pickupLatLng = markers[0].getPosition();
-            var dropoffLatLng = markers[1].getPosition();
+        // if (markers.length === 2) {
+        //     var pickupLatLng = markers[0].getPosition();
+        //     var dropoffLatLng = markers[1].getPosition();
 
-            var distance = calculateDistance(
-                pickupLatLng.lat(), pickupLatLng.lng(),
-                dropoffLatLng.lat(), dropoffLatLng.lng()
-            );
+        //     var distance = calculateDistance(
+        //         pickupLatLng.lat(), pickupLatLng.lng(),
+        //         dropoffLatLng.lat(), dropoffLatLng.lng()
+        //     );
 
-            document.getElementById('distanceValue').textContent = distance.toFixed(2);
-        }
+        //     document.getElementById('distanceValue').textContent = distance.toFixed(2);
+        // }
     }
     // Function to clear existing markers from the map
     function clearMarkers() {
@@ -241,18 +244,18 @@ include('header.php');
             zoom: 13
         });
 
-        // Create Autocomplete objects for pickup and dropoff inputs
+        
         var pickupInput = document.getElementById('pickup_location');
         var dropoffInput = document.getElementById('dropoff_location');
 
         var pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
         var dropoffAutocomplete = new google.maps.places.Autocomplete(dropoffInput);
 
-        // Clear markers when inputs are changed
+        // Clear markers
         pickupInput.addEventListener('input', clearMarkers);
         dropoffInput.addEventListener('input', clearMarkers);
 
-        // Listen for the place_changed event to add markers based on Autocomplete selection
+        // add markers based on Autocomplete selection
         pickupAutocomplete.addListener('place_changed', function() {
             placeMarker(pickupAutocomplete.getPlace());
         });
@@ -264,7 +267,7 @@ include('header.php');
 
     function loadMapsApi() {
         var script = document.createElement('script');
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSLb1GeobOtI77rC1bMNsaUBPRA4aztvo&libraries=places&callback=initMap';
         script.defer = true;
         script.async = true;
         document.body.appendChild(script);
@@ -275,7 +278,7 @@ include('header.php');
 </script>
 
                        
-  <div class="btn-outer col-md-12 text-center"><button type="submit" name="submit" class="theme-btn btn-style-three center">FIND RIDER</button></div>
+  <div class="btn-outer col-md-12 text-center"><button type="submit" name="submit" class="theme-btn btn-style-three center">BOOK RIDE</button></div>
                         
                     </div>
                 </form>

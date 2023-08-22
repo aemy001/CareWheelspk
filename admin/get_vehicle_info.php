@@ -113,8 +113,7 @@ $row = mysqli_fetch_assoc($vresult);
     name="submit"
     class="btn btn-danger"
     href="d_approvalAction.php?d_id=<?php echo $row["d_id"];?>"
-    role="button"
-  >Approve this Driver</a> 
+    role="button">Send Email Of Confirmation</a> 
 </div>
 
 </form>

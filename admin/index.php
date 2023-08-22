@@ -1,7 +1,7 @@
 <?php
 ob_start();
-require("connect.php");
 session_start();
+include("connect.php");
 if($_SESSION["a_email"]){
 ?>
 <!DOCTYPE html>
@@ -42,8 +42,7 @@ if($_SESSION["a_email"]){
      <?php
      include 'sidebar.php';
      
-$query = "SELECT * FROM `drivers` ORDER BY `d_id` DESC LIMIT 5";
-$result = mysqli_query($conn,$query);
+
 
           
       
@@ -59,12 +58,12 @@ $result = mysqli_query($conn,$query);
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
                             <?php
-                $query1 = "SELECT * FROM `drivers`";
+                $query1 = "SELECT * FROM `drivers` WHERE d_status = 'pending'";
 
                 $result1 = mysqli_query($conn,$query1);
 
                 $num_count1 = mysqli_num_rows($result1);          
-                 echo "<h3>Total Drivers: " . $num_count1 . "</h3>" ;
+                 echo "<h4>Pending Drivers: " . $num_count1 . "</h4>" ;
                
                ?>
                                 
@@ -81,18 +80,25 @@ $result = mysqli_query($conn,$query);
                 $result2 = mysqli_query($conn,$query2);
 
                 $num_count2 = mysqli_num_rows($result2);          
-                 echo "<h3>Total Customers: " . $num_count2 . "</h3>" ;
+                 echo "<h4>Total Customers: " . $num_count2 . "</h4>" ;
                
                ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
+                    <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">Total Rides</p>
-                                <h6 class="mb-0">$1234</h6>
+                        <?php
+                    $query2 = "SELECT * FROM `drivers` WHERE d_status = 'approved'";
+
+$result2 = mysqli_query($conn,$query2);
+
+$num_count2 = mysqli_num_rows($result2);          
+ echo "<h4>Approved Drivers: " . $num_count2 . "</h4>" ;
+
+?>
                             </div>
                         </div>
                     </div>
@@ -106,7 +112,7 @@ $result = mysqli_query($conn,$query);
                 $result3 = mysqli_query($conn,$query3);
 
                 $num_count3 = mysqli_num_rows($result3);          
-                 echo "<h3>Ride Requests: " . $num_count3 . "</h3>" ;
+                 echo "<h4>Ride Requests: " . $num_count3 . "</h4>" ;
                
                ?>
                             </div>
@@ -121,10 +127,14 @@ $result = mysqli_query($conn,$query);
 
 
             <!-- Recent Drivers Start -->
+            <?php
+            $cquery = "SELECT * FROM `drivers` ORDER BY `d_id` DESC LIMIT 1";
+$cresult = mysqli_query($conn,$cquery);
+?>
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Drivers</h6>
+                        <h5 class="mb-0">Recent Drivers</h5>
                         <a href="drv_req_pending.php">Show All</a>
                     </div>
                     <div class="table-responsive">
@@ -143,7 +153,7 @@ $result = mysqli_query($conn,$query);
                             </thead>
                             <tbody>
                                      <?php 
-                                          while($row=mysqli_fetch_assoc($result))
+                                          while($row=mysqli_fetch_assoc($cresult))
                                            {
                                      ?>
                                 <tr>
@@ -172,7 +182,7 @@ $cresult = mysqli_query($conn,$cquery);
  <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Drivers</h6>
+                        <h5 class="mb-0">Recent Customers</h5>
                         <a href="customer_view.php">Show All</a>
                     </div>
                     <div class="table-responsive">

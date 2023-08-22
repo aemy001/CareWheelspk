@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>VEHICLE Sign Up</title>
+<title>VEHICLE Info Sign Up</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -35,7 +35,7 @@
             <div class="bread-crumb-outer">
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.php">Home</a></li>
-                    <li class="active">Sign Up</li>
+                    <li class="active">Vehicle Info</li>
                 </ul>
             </div>
         </div>

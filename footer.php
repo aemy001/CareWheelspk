@@ -6,9 +6,9 @@
                 <div class="row clearfix">
                 
                 	<!--Footer Column-->
-                    <div class="footer-column col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-column col-md-7 col-sm-4 col-xs-12">
                         <div class="footer-widget logo-widget">
-                            <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Alii missing oculis aliorum sicut serpere crabs nostram.</div>
+                            <div class="text">Your journey, our commitment - Providing exceptional transport solutions with a touch of excellence</div>
                             <ul class="list-style">
                                 <li><span class="icon flaticon-travel"></span>361 A Napier Street, Knoxville, Newyork  </li>
                                 <li><span class="icon flaticon-technology-1"></span>+091 234 5678</li>
@@ -16,45 +16,23 @@
                             </ul>
                         </div>
                     </div>
-                    
+                 
                     <!--Footer Column-->
-                    <div class="footer-column col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-widget posts-widget">
-                            <h2>Recent Posts</h2>
-                            <div class="widget-content">
-                                <div class="posts">
-                                    <div class="post">
-                                        <figure class="post-thumb"><img src="images/resource/post-thumb-1.jpg" alt=""><a href="#" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
-                                        <div class="desc-text"><a href="#">Providing security and quality cars</a></div>
-                                        <div class="time">27 Sep 2016 / Stephen Joe</div>
-                                    </div>
-                                    <div class="post">
-                                        <figure class="post-thumb"><img src="images/resource/post-thumb-2.jpg" alt=""><a href="#" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
-                                        <div class="desc-text"><a href="#">Car hire on world wide</a></div>
-                                        <div class="time">27 Sep 2016 / Stephen Joe</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Footer Column-->
-                    <div class="footer-column col-md-4 col-sm-4 col-xs-12">
+                    <div class="footer-column col-md-5 col-sm-4 col-xs-12">
                         <div class="footer-widget gallery-widget">
                             <h2>Gallery</h2>
                             <div class="clearfix">
-                                <figure class="image"><a href="images/gallery/1.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-1.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/2.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-2.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/3.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-3.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/4.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-4.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/5.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-5.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/6.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-6.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/7.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-7.jpg" alt=""></a></figure>
-                                <figure class="image"><a href="images/gallery/8.jpg" class="lightbox-image" title="Caption Here"><img src="images/resource/footer-gallery-8.jpg" alt=""></a></figure>
+                                <figure class="image"><a href="images/gallery/f1.jpg" class="lightbox-image" title="Fixed Rates"><img src="images/gallery/f1.jpg" alt=""></a></figure>
+                                <figure class="image"><a href="images/gallery/f2.jpg" class="lightbox-image" title="Reliable Transfers"><img src="images/gallery/f2.jpg" alt=""></a></figure>
+                                <figure class="image"><a href="images/gallery/f3.jpg" class="lightbox-image" title="Free Cancellation"><img src="images/gallery/f3.jpg" alt=""></a></figure>
+                                <!-- <figure class="image"><a href="images/gallery/f4.jpg" class="lightbox-image" title="Caption Here"><img src="images/gallery/f4.jpg" alt=""></a></figure> -->
+                                <figure class="image"><a href="images/gallery/f5.jpg" class="lightbox-image" title="Award winning Service"><img src="images/gallery/f5.jpg" alt=""></a></figure>
+                                <figure class="image"><a href="images/gallery/f6.jpg" class="lightbox-image" title="Quality Vehicles"><img src="images/gallery/f6.jpg" alt=""></a></figure>
+                                <figure class="image"><a href="images/gallery/f7.jpg" class="lightbox-image" title="24H Customer Service"><img src="images/gallery/f7.jpg" alt=""></a></figure>
+                                <!-- <figure class="image"><a href="images/gallery/8.jpg" class="lightbox-image" title="Caption Here"><img src="images/gallery/f8.jpg" alt=""></a></figure> -->
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -66,11 +44,10 @@
                 	
                     <div class="col-md-6 col-sm-6 col-xs-12">
                     	<ul class="footer-nav">
-                        	<li><a href="#">Contact</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Our Cars</a></li>
-                            <li><a href="#">Service Rates</a></li>
-                            <li><a href="#">Blog</a></li>
+                        	<li><a href="contact.php">Contact</a></li>
+                            <li><a href="services.php">Services</a></li>
+                            <li><a href="booking.php">Booking</a></li>
+                            <li><a href="about.php">About Us</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-right">

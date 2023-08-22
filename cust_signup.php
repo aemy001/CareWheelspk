@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>Zagreb HTML Template | Contact Us</title>
+<title>CareWheels | Signup to Ride</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -29,13 +29,13 @@
     
     ?>
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/main-slider/image-2.jpg); background-size:cover; background-repeat:no-repeat;">
+    <section class="page-title" style="background-image:url(images/gallery/9.jpg); background-size:cover; background-repeat:no-repeat;">
         <div class="auto-container">
             <h1>SIGN UP</h1>
             <div class="bread-crumb-outer">
                 <ul class="bread-crumb clearfix">
                     <li><a href="index-2.php">Home</a></li>
-                    <li class="active">Sign Up</li>
+                    <li class="active">Sign Up To Ride</li>
                 </ul>
             </div>
         </div>
@@ -79,44 +79,50 @@
                 </div> -->
                 
                 <!--Form Column-->	
-                <div class="form-column column col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <div class="form-column column col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
                     
                     <!-- Contact Form -->
                     <div class="contact-form">
                     	<div class="group-title">
                         	
                         <!--Contact Form-->
-                       <form method="post" action="cust_signupAction.php" id="contact-form">
-                            <div class="row clearfix">
+                       <form method="post"  action="cust_signupAction.php" id="contact-form" onsubmit="return formValidateR()">
+                            <div class="row clearfix justify-content-center">
                                 <div class="col-sm-6 form-group">
                                     <label  for="">FIRST NAME:</label>
-                                    <input type="text" name="fname" placeholder="Enter First Name *">
+                                    <input type="text" id="fname" name="fname" placeholder="Enter First Name *" required>
+                                    <span id="fnamee"></span>
                                 </div>
                                 
                                 <div class="col-sm-6 form-group">
                                     <label  for="">LAST NAME:</label>
-                                    <input type="text" name="lname" placeholder="Enter Last Name *">
+                                    <input type="text" id="lname" name="lname" placeholder="Enter Last Name *" required>
+                                    <span id="lnamee"></span>
                                 </div>
                                 
                                 <div class="col-sm-12 form-group">
                                     <label for="">NUMBER:</label>
-                                    <input type="tel" name="number" placeholder="Enter Phone Number *">
+                                    <input type="tel" id="num" name="number" placeholder="Enter Phone Number *" required>
+                                    <span id="unum"></span>
                                 </div>
 
 
                                 <div class="col-sm-12 form-group">
                                 <label  for="">ADDRESS:</label>
-                                    <input type="text" name="address" placeholder="Enter Address *">
+                                    <input type="text" id="address" name="address" placeholder="Enter Address *" required>
+                                    <span id="addresss"></span>
                                 </div>
                                 
                                 <div class="col-sm-12 form-group">
                                 <label  for="">EMAIL:</label>
-                                    <input type="email" name="email" placeholder="Enter Email *">
+                                    <input type="email" id="email" name="email" placeholder="Enter Email *" required>
+                                    <span id="emaill"></span>
                                 </div>
 
                                 <div class="col-sm-12 form-group">
                                 <label  for="">PASSWORD:</label>
-                                    <input type="password" name="password" placeholder="Enter Password *">
+                                    <input type="password" id="password" name="password" placeholder="Enter Password *" required>
+                                    <span id="passwordd"></span>
                                 </div>
 
                                 
@@ -126,6 +132,76 @@
                                 
                             </div>
                         </form>
+                        <div class="text-center login">Already have an account? <a href="cust_login.php" style="color: green;">Log in</a></div>
+    <script>
+            function formValidateR() {
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var num = document.getElementById("num").value;
+                var address = document.getElementById("address").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+            
+                if (fname == "") {
+                    document.getElementById("fnamee").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+               else if (!isNaN(fname)) {
+                    document.getElementById("fnamee").innerHTML = "*Number is not allowed";
+                    return false;
+                }
+                else if (lname == "") {
+                    document.getElementById("fnamee").innerHTML = "";
+                    document.getElementById("lnamee").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+                else if (!isNaN(lname)) {
+                    document.getElementById("lnamee").innerHTML = "*Number is not allowed";
+                    return false;
+                }
+                else if (num == "") {
+                    document.getElementById("lnamee").innerHTML = "";
+                    document.getElementById("unum").innerHTML = "*Enter number";
+                    return false;
+                }
+               else if (num.length <= 10) {
+                    document.getElementById("unum").innerHTML = "*Enter Valid Number";
+                    return false;
+                }
+               else if (num.length >= 12) {
+                    document.getElementById("unum").innerHTML = "*Enter Valid Number";
+                    return false;
+                }
+                else if (address == "") {
+                    document.getElementById("unum").innerHTML = "";
+                    document.getElementById("addresss").innerHTML = "*Enter atleast one character";
+                    return false;
+                }
+               else if (email == "") {
+                    document.getElementById("addresss").innerHTML = "";
+                    document.getElementById("emaill").innerHTML = "*Enter email";
+                    return false;
+                }
+               else if (email.length <= 3) {
+                    document.getElementById("emaill").innerHTML = "*Email should not be less than three characters";
+                    return false;
+                }
+               else if (email.indexOf("@") <= 0) {
+                    document.getElementById("emaill").innerHTML = "*Please enter correct format";
+                    return false;
+                }
+                else if (password == "") {
+                    document.getElementById("emaill").innerHTML = "";
+                     document.getElementById("passwordd").innerHTML = "*Enter Password";
+                     return false;
+                 }
+               else if (password.length <= 4) {
+                    document.getElementById("passwordd").innerHTML = "*Password is to short";
+                    return false;
+                }
+              
+            }
+        </script>
                     </div>
                     <!--End Contact Form -->
                     

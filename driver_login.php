@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<title>Driver Sign Up</title>
+<title>Care Wheels | Login to drive</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
     ?>
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/main-slider/image-2.jpg); background-size:cover; background-repeat:no-repeat;">
+    <section class="page-title" style="background-image:url(images/gallery/9.jpg); background-size:cover; background-repeat:no-repeat;">
         <div class="auto-container">
             <h1>LOG IN TO DRIVE</h1>
             <div class="bread-crumb-outer">

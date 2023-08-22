@@ -56,7 +56,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text">Tremor est vivos magna. Expansis ulnis video missing <br> carnem armis caeruleum in locis.</div></div>
+                    data-endeasing="Power4.easeIn"><div class="text">Discover the best worldwide car hire deals for your ultimate journey.</div></div>
                     
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -69,12 +69,12 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-one">EXPLORE NOW</a></div>
+                    data-endeasing="Power4.easeIn"><a href="services.php" class="theme-btn btn-style-one">EXPLORE NOW</a></div>
                     
                     </li>
                     
                     <li class="overlay-none" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/image-2.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    <img src="images/main-slider/image3.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -100,7 +100,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text">Tremor est vivos magna. Expansis ulnis video missing <br> carnem armis caeruleum in locis.</div></div>
+                    data-endeasing="Power4.easeIn"><div class="text">Need a ride? We've got you covered - your journey starts here.</div></div>
                     
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -113,12 +113,12 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-two">MAKE A BOOKING</a> &nbsp; &nbsp; <a href="#" class="theme-btn btn-style-one">MAKE A BOOKING</a></div>
+                    data-endeasing="Power4.easeIn"><a href="booking.php" class="theme-btn btn-style-two">BOOK NOW</a> &nbsp; &nbsp; <a href="booking.php" class="theme-btn btn-style-one">SCHEDULE FOR LATER</a></div>
                     
                     </li>
                     
                     <li class="overlay-none" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-3.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/image-3.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                    <img src="images/main-slider/image2.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption sft sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
@@ -144,7 +144,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text text-center">Pestilentia est haec ambulabat mortuos. Sicut malus voodoo. Aenean a dolor <br> vulnerum aperire accedunt, mortui iam vivam.</div></div>
+                    data-endeasing="Power4.easeIn"><div class="text text-center">Hire a professional driver for a safe and convenient travel experience.</div></div>
                     
                     <div class="tp-caption sfb sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
@@ -157,7 +157,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-two">CONTACT NOW</a> &nbsp; &nbsp; <a href="#" class="theme-btn btn-style-one">DONATE NOW</a> </div>
+                    data-endeasing="Power4.easeIn"><a href="contact.php" class="theme-btn btn-style-two">CONTACT NOW</a> </div>
                     
                     </li>
                     
@@ -180,52 +180,30 @@ include('header.php');
                             <div class="row clearfix">
     
                                 <!--Form Group-->
-                                <div class="form-group country col-md-3 col-sm-6 col-xs-12">
-                                	<div class="group-inner">
-                                        <div class="field-label">VEHICLE TYPE</div>
-                                        <select name="category" class="select-number">
-                                            <option>SUV</option>
-                                            <option>SUV 1</option>
-                                            <option>SUV 2</option>
-                                            <option>SUV 3</option>
-                                            <option>SUV 4</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                
     
-                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                     <div class="group-inner">
                                     	<div class="field-label">DEPARTURE DATE</div>
                                         <input type="text" name="date" class="datepicker" value="" placeholder="Date" required>
                                     </div>
                                 </div>
     
-                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group col-md-4 col-sm-7 col-xs-12">
                                     <div class="group-inner">
                                     	<div class="field-label">PICK UP LOCATION</div>
                                         <div class="group-inner">
-                                            <select name="country" class="select-number">
-                                                <option>Select Location</option>
-                                                <option>Pakistan</option>
-                                                <option>Australia</option>
-                                                <option>Canada</option>
-                                                <option>New Zealand</option>
-                                            </select>
+                                        <input type="text" name="text" value="" placeholder="Pickup Location" required>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group col-md-4 col-sm-8 col-xs-12">
                                     <div class="group-inner">
                                     	<div class="field-label">DROP OFF LOCATION</div>
                                         <div class="group-inner">
-                                            <select name="country" class="select-number">
-                                                <option>Select Location</option>
-                                                <option>Pakistan</option>
-                                                <option>Australia</option>
-                                                <option>Canada</option>
-                                                <option>New Zealand</option>
-                                            </select>
+                                        <input type="text" name="text" value="" placeholder="Drop Off Location" required>
+
                                         </div>
                                     </div>
                                 </div>
@@ -236,38 +214,14 @@ include('header.php');
                             <div class="lower-form-box">
                             	<div class="row clearfix">
                                 
-                                	<div class="form-group col-lg-5 col-md-6 col-sm-7 col-xs-12">
-                                        <div class="group-inner">
-                                            <div class="input-label">HOW MANY PEOPLES (INCLUDING CHILDREN)?</div>
-                                            <input class="number-of-people" type="text" name="peoples" value="" placeholder="">
-                                        </div>
-                                    </div>
+                                	
                                     
-                                    <div class="form-group col-lg-3 col-md-4 col-sm-5 col-xs-12">
-                                        <div class="select-box">
-                                            <input type="radio" name="hire-group" id="radio-one">
-                                            <label for="radio-one">
-                                                <span class="default-check"></span>
-                                                <span class="check-icon fa fa-circle"></span>
-                                                RETURN
-                                            </label>
-                                        </div>
-                                        
-                                        <div class="select-box">
-                                            <input type="radio" name="hire-group" id="radio-two">
-                                            <label for="radio-two">
-                                                <span class="default-check"></span>
-                                                <span class="check-icon fa fa-circle"></span>
-                                                ONE WAY
-                                            </label>
-                                        </div>
-                                        
+                                   
+                                  <div class="form-group col-lg-1 col-md-6 col-md-6 col-xs-6 text-right">
+                                        <button type="submit" name="submit"  class="theme-btn btn-style-two"><a href="booking.php">BOOK</a></button>
                                     </div>
-                                  <div class="form-group col-lg-1 col-md-6 col-sm-6 col-xs-6 text-right">
-                                        <button type="book" name="submit" style="color: white !important" class="theme-btn btn-style-one"><a href="booking.php">BOOK</a></button>
-                                    </div>
-                                    <div class="form-group col-lg-3 col-md-6 col-sm-6 col-xs-6 text-right">
-                                        <button type="request" name="submit" class="theme-btn btn-style-one">Request Now</button>
+                                    <div class="form-group col-lg-3 col-md-6 col-md-6 col-xs-6 text-right">
+                                        <button type="submit" name="submit" class="theme-btn btn-style-two"><a href="booking.php">REQUEST NOW</a></button>
                                     </div>
                                   
                                     
@@ -290,36 +244,30 @@ include('header.php');
                 <!--Sec Title-->
                 <div class="sec-title">
                     <div class="inner-title-box">
-                        <h2>SELECT <span>YOUR CAR BY</span></h2>
-                        <h4 class="rotate-title">OUR CARS</h4>
+                        <h2>SERVICES  <span> WE PROVIDE</span></h2>
+                      
                     </div>
                 </div>
                 
             	<!--Tabs Box / Tabs Style One-->
                 <div class="select-car-tabs">
-                    <!--Tab Buttons-->
-                    <ul class="tab-buttons clearfix">
-                        <li class="tab-btn active-btn" data-tab="#tab-one"> BRANDS</li>
-                        <li class="tab-btn" data-tab="#tab-two"> TYPES</li>
-                    </ul>
-                    
-                    <!--Tabs Content-->
+                   
                     <div class="tabs-content">
                         
                         <!--Tab / Active Tab-->
-                        <div class="tab active-tab" id="tab-one">
+                        <div >
                              <div class="three-item-carousel">
                                 <!--Car Block-->
                                 <div class="car-block">
                                     <div class="inner-box">
-                                        <h3>Cuv</h3>
+                                        <h3>Basic Ride</h3>
                                         <figure class="image-box">
                                             <img src="images/resource/car-1.jpg" alt="" />
                                         </figure>
                                         
                                         <div class="lower-box">
-                                            <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Qui tardius moveri, sed in magna copia sint terribiles legionis. </div>
-                                            <a class="arrow" href="#"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
+                                            <div class="text">Our budget-friendly "Without AC" option provides a comfortable and reliable ride at an affordable price. <br> This service is perfect for individuals seeking an efficient transportation solution without  <br> compromising on quality and safety. </div>
+                                            <a class="arrow" href="services.php"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
                                         </div>
                                         
                                     </div>
@@ -327,14 +275,14 @@ include('header.php');
                                 <!--Car Block-->
                                 <div class="car-block">
                                     <div class="inner-box">
-                                        <h3>HATCHBACK</h3>
+                                        <h3>AC Ride</h3>
                                         <figure class="image-box">
                                             <img src="images/resource/car-2.jpg" alt="" />
                                         </figure>
                                         
                                         <div class="lower-box">
-                                            <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Qui tardius moveri, sed in magna copia sint terribiles legionis. </div>
-                                            <a class="arrow" href="#"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
+                                            <div class="text">Stay cool and refreshed during your journey <br> with our "With AC" option. Experience a climate-controlled environment to make your ride more pleasant, especially during Pakistan's warm weather conditions. </div>
+                                            <a class="arrow" href="services.php"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
                                         </div>
                                         
                                     </div>
@@ -342,14 +290,14 @@ include('header.php');
                                 <!--Car Block-->
                                 <div class="car-block">
                                     <div class="inner-box">
-                                        <h3>SEDAN</h3>
+                                        <h3>Luxury Ride</h3>
                                         <figure class="image-box">
                                             <img src="images/resource/car-3.jpg" alt="" />
                                         </figure>
                                         
                                         <div class="lower-box">
-                                            <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Qui tardius moveri, sed in magna copia sint terribiles legionis. </div>
-                                            <a class="arrow" href="#"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
+                                            <div class="text">Indulge in the ultimate travel experience with our "Luxury Ride" service. Enjoy a premium and comfortable journey with extra amenities and personalized assistance, designed to make your special moments even more memorable.</div>
+                                            <a class="arrow" href="services.php"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
                                         </div>
                                         
                                     </div>
@@ -359,7 +307,7 @@ include('header.php');
                         
                         <!--Tab-->
                         <div class="tab" id="tab-two">
-                            <div class="three-item-carousel">
+                            <div>
                                 <!--Car Block-->
                                 <div class="car-block">
                                     <div class="inner-box">
@@ -375,36 +323,7 @@ include('header.php');
                                         
                                     </div>
                                 </div>
-                                <!--Car Block-->
-                                <div class="car-block">
-                                    <div class="inner-box">
-                                        <h3>HATCHBACK</h3>
-                                        <figure class="image-box">
-                                            <img src="images/resource/car-2.jpg" alt="" />
-                                        </figure>
-                                        
-                                        <div class="lower-box">
-                                            <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Qui tardius moveri, sed in magna copia sint terribiles legionis. </div>
-                                            <a class="arrow" href="#"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!--Car Block-->
-                                <div class="car-block">
-                                    <div class="inner-box">
-                                        <h3>SEDAN</h3>
-                                        <figure class="image-box">
-                                            <img src="images/resource/car-3.jpg" alt="" />
-                                        </figure>
-                                        
-                                        <div class="lower-box">
-                                            <div class="text">Aenean a dolor vulnerum aperire accedunt, mortui iam vivam. Qui tardius moveri, sed in magna copia sint terribiles legionis. </div>
-                                            <a class="arrow" href="#"><span class="icon fa fa-angle-right"></span><span class="text">Browse the Category</span></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                         
@@ -443,7 +362,7 @@ include('header.php');
                             </div>
                             <div class="lower-box">
                                 <h3><a href="services.php">Fixed Rates</a></h3>
-                                <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
+                                <div class="text">Our transport services offer transparent fixed rates, eliminating surprises and budget uncertainties.</div>
                             </div>
                             
                         </div>
@@ -460,7 +379,7 @@ include('header.php');
                             </div>
                             <div class="lower-box">
                                 <h3><a href="services.php">Reliable Transfers</a></h3>
-                                <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
+                                <div class="text">Count on our reliable transfers for on-time and stress-free transportation, wherever your journey takes you </div>
                             </div>
                             
                         </div>
@@ -477,7 +396,7 @@ include('header.php');
                             </div>
                             <div class="lower-box">
                                 <h3><a href="services.php">Free Cancellation</a></h3>
-                                <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
+                                <div class="text">Enjoy the freedom to change your travel plans with our hassle-free cancellation policy.</div>
                             </div>
                             
                         </div>
@@ -494,7 +413,7 @@ include('header.php');
                             </div>
                             <div class="lower-box">
                                 <h3><a href="services.php">Award winning Service</a></h3>
-                                <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
+                                <div class="text">Experience our award-winning service that consistently sets industry standards for excellence.</div>
                             </div>
                             
                         </div>
@@ -511,7 +430,7 @@ include('header.php');
                             </div>
                             <div class="lower-box">
                                 <h3><a href="services.php">Quality Vehicles</a></h3>
-                                <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
+                                <div class="text">Travel in style and comfort with our fleet of top-notch, quality vehicles. </div>
                             </div>
                             
                         </div>
@@ -528,7 +447,7 @@ include('header.php');
                             </div>
                             <div class="lower-box">
                                 <h3><a href="services.php">24H Customer Service</a></h3>
-                                <div class="text">In omni memoria patriae religionis sunt diri undead historiarum. Golums, zombies et fascinati. </div>
+                                <div class="text">Our dedicated 24-hour customer service team is here to assist you around the clock, ensuring a seamless journey anytime you need.</div>
                             </div>
                             
                         </div>
@@ -540,190 +459,7 @@ include('header.php');
     </section>
     <!--End Services Block-->
     
-    <!--Testimonials Section-->
-    <section class="default-testimonials">
-    	<div class="auto-container">
-        	<div class="row clearfix">
-            
-            	<!--Client Tesimonial-->
-            	<div class="client-tesimonial col-md-6 col-sm-12 col-xs-12">
-                	<h2>WHAT PEOPLE SAY</h2>
-                    <div class="single-item-carousel">
-                    
-                    	<!--Testimonial Block Two-->
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="quote-icon"><span class="icon flaticon-left-quote"></span></div>
-                                <div class="text">“De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cun cerebella viventium.”</div>
-                                <div class="author-info">
-                                    <div class="image">
-                                        <img src="images/resource/author-1.jpg" alt="" />
-                                    </div>
-                                    <h3>Adam Levine</h3>
-                                    <div class="designation">Manager, TEKS</div>
-                                </div>
-                                <div class="carousel-number">01 <span>/ 04</span> </div>
-                            </div>
-                        </div>
-                        
-                        <!--Testimonial Block Two-->
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="quote-icon"><span class="icon flaticon-left-quote"></span></div>
-                                <div class="text">“De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cun cerebella viventium.”</div>
-                                <div class="author-info">
-                                    <div class="image">
-                                        <img src="images/resource/author-1.jpg" alt="" />
-                                    </div>
-                                    <h3>Adam Levine</h3>
-                                    <div class="designation">Manager, TEKS</div>
-                                </div>
-                                <div class="carousel-number">02 <span>/ 04</span> </div>
-                            </div>
-                        </div>
-                        
-                        <!--Testimonial Block Two-->
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="quote-icon"><span class="icon flaticon-left-quote"></span></div>
-                                <div class="text">“De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cun cerebella viventium.”</div>
-                                <div class="author-info">
-                                    <div class="image">
-                                        <img src="images/resource/author-1.jpg" alt="" />
-                                    </div>
-                                    <h3>Adam Levine</h3>
-                                    <div class="designation">Manager, TEKS</div>
-                                </div>
-                                <div class="carousel-number">03 <span>/ 04</span> </div>
-                            </div>
-                        </div>
-                        
-                         <!--Testimonial Block Two-->
-                        <div class="testimonial-block-two">
-                            <div class="inner-box">
-                                <div class="quote-icon"><span class="icon flaticon-left-quote"></span></div>
-                                <div class="text">“De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cun cerebella viventium.”</div>
-                                <div class="author-info">
-                                    <div class="image">
-                                        <img src="images/resource/author-1.jpg" alt="" />
-                                    </div>
-                                    <h3>Adam Levine</h3>
-                                    <div class="designation">Manager, TEKS</div>
-                                </div>
-                                <div class="carousel-number">04 <span>/ 04</span> </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!--News Testimonial Column-->
-                <div class="news-testimonial-column col-md-6 col-sm-12 col-xs-12">
-                	<h2>SEE OUR LATEST NEWS</h2>
-                    <div class="news-carousel">
-                    	<!--News Block Two-->
-                        <div class="news-block-two">
-                            <div class="inner-box">
-                                <div class="row clearfix">
-                                    <!--Image Column-->
-                                    <div class="image-column col-md-6 col-sm-12 col-xs-12">
-                                        <figure class="image">
-                                            <a href="blog-detail.php"><img src="images/resource/news-2.jpg" alt="" /></a>
-                                        </figure>
-                                    </div>
-                                    <!--Content Column-->
-                                    <div class="content-column col-md-6 col-sm-12 col-xs-12">
-                                        <div class="inner">
-                                            <div class="posted">26 September 2016 / Laura Datta</div>
-                                            <h3><a href="blog-detail.php">Mercedez S63 AMG Luxury Sports Coupe presented at Belgrade</a></h3>
-                                            <div class="text">Tremor est vivos magna. Expansis ulnis video missing carnem armis caeruleum in locis.</div>
-                                            <a class="view-more" href="blog-detail.php">VIEW MORE</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                             </div>
-                        </div>
-                        
-                        <!--News Block Two-->
-                        <div class="news-block-two">
-                            <div class="inner-box">
-                                <div class="row clearfix">
-                                    <!--Image Column-->
-                                    <div class="image-column col-md-6 col-sm-12 col-xs-12">
-                                        <figure class="image">
-                                            <a href="blog-detail.php"><img src="images/resource/news-2.jpg" alt="" /></a>
-                                        </figure>
-                                    </div>
-                                    <!--Content Column-->
-                                    <div class="content-column col-md-6 col-sm-12 col-xs-12">
-                                        <div class="inner">
-                                            <div class="posted">26 September 2016 / Laura Datta</div>
-                                            <h3><a href="blog-detail.php">Mercedez S63 AMG Luxury Sports Coupe presented at Belgrade</a></h3>
-                                            <div class="text">Tremor est vivos magna. Expansis ulnis video missing carnem armis caeruleum in locis.</div>
-                                            <a class="view-more" href="blog-detail.php">VIEW MORE</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                             </div>
-                        </div>
-                        
-                        <!--News Block Two-->
-                        <div class="news-block-two">
-                            <div class="inner-box">
-                                <div class="row clearfix">
-                                    <!--Image Column-->
-                                    <div class="image-column col-md-6 col-sm-12 col-xs-12">
-                                        <figure class="image">
-                                            <a href="blog-detail.php"><img src="images/resource/news-2.jpg" alt="" /></a>
-                                        </figure>
-                                    </div>
-                                    <!--Content Column-->
-                                    <div class="content-column col-md-6 col-sm-12 col-xs-12">
-                                        <div class="inner">
-                                            <div class="posted">26 September 2016 / Laura Datta</div>
-                                            <h3><a href="blog-detail.php">Mercedez S63 AMG Luxury Sports Coupe presented at Belgrade</a></h3>
-                                            <div class="text">Tremor est vivos magna. Expansis ulnis video missing carnem armis caeruleum in locis.</div>
-                                            <a class="view-more" href="blog-detail.php">VIEW MORE</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                             </div>
-                        </div>
-                        
-						<!--End News Block Two-->
-                        
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!--End Testimonials Section-->
-    
-    <!--sponsors style-->
-    <section class="sponsors-style-one">
-    	<div class="auto-container">
-        	<div class="sponsors-outer">
-                <!--Sponsors Carousel-->
-                <ul class="sponsors-carousel">
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--sponsors style-->
+
     <?php
 include('footer.php');
 ?>

@@ -1,7 +1,8 @@
 <?php
+session_start();
 require ("connect.php");
-
 if(isset($_POST["v_submit"])){
+    
     $d_id = $_POST["d_id"];
     $vname = $_POST["v_name"];
     $vmodel = $_POST["v_model"];
@@ -29,8 +30,8 @@ if(isset($_POST["v_submit"])){
     $deliver = mysqli_query($conn , $insert);
 
     if($deliver){
-       echo "<script> alert('You will soon recieve a confirmation email'); </script>";
-      header("location:driver_signup.php");
+        echo "<script>alert('Your Driver Request Is Pending, You Will Recieve an email after being approved');</script>";
+       header('location:driver_login.php');
       exit;
     }
 

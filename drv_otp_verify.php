@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Driver Verification</title>
 </head>
 <body>
-    <form action="d_otpverifyAction.php" method="POST">
+    <h2>Verify By Entering the OTP you recieved on your mail</h2>
+    <form action="drv_otpverifyAction.php" method="POST">
     <input type="number" name="ottpuser" min=101 max="201">
     <br>
     <br>
