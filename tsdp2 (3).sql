@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2023 at 07:02 AM
+-- Generation Time: Aug 23, 2023 at 06:37 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -76,17 +76,19 @@ INSERT INTO `booking` (`booking_id`, `pickup_date`, `pickup_time`, `pickup_locat
 (12, '2023-08-09', '07:27:59', 'Ayesha Manzil Pedestrian Crosssing, F.B Area Block 6 Bl', 'Ziauddin Hospital, Shahrah-e-Ghalib Road, Block 6 Clift', NULL, 200, 5, 25, 1, NULL, 'Completed'),
 (14, '1970-01-01', '02:25:04', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 700, 4, 25, 3, NULL, 'Completed'),
 (19, '1970-01-01', '05:01:52', 'Aptech Computer Education North Nazimabad Center, Block', 'Liaquat National Hospital, Karachi, Pakistan', NULL, 500, 5, 23, 1, NULL, 'Started'),
-(23, '1970-01-01', '07:23:17', 'Dolmen Mall Clifton, Marine Promenade, Block 4 Clifton,', 'OCEAN MALL Parking Road، Block 9 Clifton, Karachi, Paki', NULL, NULL, 5, NULL, 1, NULL, 'Pending'),
+(23, '1970-01-01', '07:23:17', 'Dolmen Mall Clifton, Marine Promenade, Block 4 Clifton,', 'OCEAN MALL Parking Road، Block 9 Clifton, Karachi, Paki', NULL, 0, 5, 23, 1, NULL, 'Cancelled'),
 (25, '2023-08-23', '07:26:57', 'Maritime Museum Road, Karsaz Faisal Cantonment, Karachi', 'Al Habib Restaurant, Karachi - Hyderabad Motorway, Gada', NULL, NULL, 5, NULL, 1, NULL, 'Pending'),
-(27, '2023-08-22', '07:35:57', 'Arena - Mosque, Karsaz Faisal Cantonment, Karachi, Paki', 'Jinnah International Airport, Faisal Cantonment, Karach', NULL, NULL, 5, NULL, 3, NULL, 'Pending'),
-(28, '2023-08-22', '08:00:38', 'Liaquatabad, Karachi, Pakistan', 'Gulshan-e-Iqbal, Karachi, Pakistan', NULL, NULL, 5, NULL, 1, NULL, 'Pending'),
+(27, '2023-08-22', '07:35:57', 'Arena - Mosque, Karsaz Faisal Cantonment, Karachi, Paki', 'Jinnah International Airport, Faisal Cantonment, Karach', NULL, 600, 5, 23, 3, NULL, 'Completed'),
+(28, '2023-08-22', '08:00:38', 'Liaquatabad, Karachi, Pakistan', 'Gulshan-e-Iqbal, Karachi, Pakistan', NULL, 0, 5, 23, 1, NULL, 'Cancelled'),
 (29, '2023-08-22', '08:00:38', 'Liaquatabad, Karachi, Pakistan', 'Gulshan-e-Iqbal, Karachi, Pakistan', NULL, NULL, 5, NULL, 1, NULL, 'Pending'),
 (30, '2023-08-22', '08:00:38', 'Liaquatabad, Karachi, Pakistan', 'Gulshan-e-Iqbal, Karachi, Pakistan', NULL, NULL, 5, NULL, 1, NULL, 'Pending'),
-(31, '2023-08-22', '08:04:15', 'Karachi, Pakistan', 'Lahore, Pakistan', NULL, NULL, 5, NULL, 1, NULL, 'Pending'),
+(31, '2023-08-22', '08:04:15', 'Karachi, Pakistan', 'Lahore, Pakistan', NULL, 0, 5, 23, 1, NULL, 'Cancelled'),
 (32, '2023-08-22', '08:15:45', 'MashAllah Fast Food, Block 7 Gulshan-e-Iqbal, Karachi, ', 'Agha Khan Hospital Pond No.1, Aga Khan University Hospi', NULL, 1000, 5, 23, 1, NULL, 'Started'),
 (33, '2023-08-22', '08:26:45', 'Aptech Computer Education North Nazimabad Center, Block', 'Surjani Town, Karachi, Pakistan', NULL, 2000, 5, 23, 1, NULL, 'Started'),
 (34, '2023-08-22', '09:22:20', 'Mazare Quaid-i-Azam, M.A Jinnah Road, Central Jacob Lin', 'Clifton Hospital, Block 5 Clifton, Karachi, Pakistan', NULL, 700, 5, 23, 1, NULL, 'Started'),
-(35, '2023-08-22', '09:36:17', 'Aptech Computer Education North Nazimabad Center, Block', 'KFC, Khayaban-e-Ittehad Road, Phase 2 Commercial Area D', NULL, NULL, 5, NULL, 1, NULL, 'Pending');
+(35, '2023-08-22', '09:36:17', 'Aptech Computer Education North Nazimabad Center, Block', 'KFC, Khayaban-e-Ittehad Road, Phase 2 Commercial Area D', NULL, 0, 5, 26, 1, NULL, 'Started'),
+(36, '2023-08-22', '09:38:01', 'aptech', 'aptech', NULL, 0, 5, 23, 1, NULL, 'Cancelled'),
+(37, '2023-08-22', '11:14:07', 'Aptech Computer Education North Nazimabad Center, Block', 'Shaheed-e-Millat Government Degree College for Women, A', NULL, 500, 6, 26, 3, NULL, 'Started');
 
 -- --------------------------------------------------------
 
@@ -132,7 +134,8 @@ CREATE TABLE `customers_info` (
 
 INSERT INTO `customers_info` (`c_id`, `c_firstname`, `c_lastname`, `c_phone`, `c_address`, `c_email`, `c_password`) VALUES
 (4, '   MUBASHIRA', '   KHAN', 3115469287, 'nazimabad', 'MUBASHIRA@GMAIL.COM', '123456'),
-(5, '   Zunairaa', '   Jawedd', 3104494368, 'Bahria Town', 'jawedsalman53@gmail.com', '1234567');
+(5, '   Zunairaa', '   Jawedd', 3104494368, 'Bahria Town', 'jawedsalman53@gmail.com', '1234567'),
+(6, 'Aemy', 'Khan', 3118753425, 'gulshan karachi', 'baigzoha02@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759');
 
 -- --------------------------------------------------------
 
@@ -163,7 +166,9 @@ INSERT INTO `drivers` (`d_id`, `d_fname`, `d_lname`, `d_phone`, `CNIC`, `d_email
 (18, 'Arijit', 'Singh', 3111000001, 4210110101010, 'arijit@gmail.com', 'gulberg', '12345', 'Pending'),
 (20, 'Hamdan', 'Ali', 3020202022, 4210118181811, 'hamdan@gmail.com', 'garden', '12345', 'Pending'),
 (23, ' Ian', ' Somerhalder', 3000127354, 4222222222222, 'iansomerhalder@gmail.com', 'Clifton', '12345', 'Approved'),
-(25, ' Aemy', ' K', 3112345670, 42147899222, 'jawed567@gmail.com', 'garden east, karachi', '1234567', 'Approved');
+(25, ' Aemy', ' K', 3112345670, 42147899222, 'jawed567@gmail.com', 'garden east, karachi', '1234567', 'Approved'),
+(26, ' zoha', ' baig', 3143521219, 0, 'baigzoha02@gmail.com', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
+(27, ' Tooba', ' Khawar', 2345667811, 0, 'toobakhawar@aptechnorth.edu.pk', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -183,12 +188,14 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`feedback_id`, `ratings`, `comment`, `booking_id`) VALUES
-(4, 'on', 'ikr', NULL),
+(4, 'on', 'ikr', 6),
 (7, 'on', 'ikr', NULL),
 (8, 'on', 'nothing , everything will be good.....', NULL),
 (9, 'on', 'nothing , everything will be good.....', NULL),
 (10, 'on', 'good', NULL),
-(13, 'on', 'good', 35);
+(13, 'on', 'good', 35),
+(14, 'Mediocre', 'good', 36),
+(15, 'Good', '', 37);
 
 -- --------------------------------------------------------
 
@@ -242,7 +249,9 @@ INSERT INTO `vehicles` (`v_id`, `v_name`, `v_model`, `v_year`, `v_capacity`, `v_
 (8, 'Demers', 'Yellow Type 2', 2018, 2, 'C-543', 22, 'glasses.jpg', 'Aviator.png', '2_HeroDesktop_1920x800.jpg', 'glasses.jpg'),
 (9, 'Demers', 'HiLux Vigo', 2018, 2, 'C-545', 23, 'driver.jpg', 'Smart-Card-Vehicle-Registration.jpg', 'download.jpg', 'license.jpg'),
 (10, 'toyota', 'HiLux Vigo', 2018, 3, 'C-549', 24, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
-(12, 'toyota', 'HiLux Vigo', 2018, 2, 'C-544', 25, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG');
+(12, 'toyota', 'HiLux Vigo', 2018, 2, 'C-544', 25, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
+(13, 'Toyota', 'Demers', 2007, 2, 'kp-098', 26, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
+(14, 'Toyota', 'Demers', 2008, 2, 'kp-099', 27, 'license.jpg', 'drvlic.PNG', 'biometric-registration.jpg', ' download.jpg');
 
 --
 -- Indexes for dumped tables
@@ -321,7 +330,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -333,19 +342,19 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `customers_info`
 --
 ALTER TABLE `customers_info`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -357,7 +366,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
