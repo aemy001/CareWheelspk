@@ -45,7 +45,7 @@ if($_SESSION["a_email"]){
 <div class="page-wrapper">
 <?php
 include('sidebar.php');
-$query = "SELECT * FROM drivers JOIN vehicles ON drivers.d_id = vehicles.d_id";
+$query = "SELECT * FROM drivers JOIN vehicles ON drivers.d_id = vehicles.d_id ORDER BY drivers.d_id DESC";
 $result = mysqli_query($conn,$query);        
       
       ?>
@@ -55,7 +55,6 @@ $result = mysqli_query($conn,$query);
 <table class="table table-dark table-hover">
   <thead>
     <tr>
-      <th scope="col">ID</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Phone</th>
@@ -76,8 +75,6 @@ $result = mysqli_query($conn,$query);
      {
        ?>
     <tr>
-   
-      <th scope="row"><?php echo $row['d_id'];?></th>
       <td><?php echo $row['d_fname'];?></td>
       <td><?php echo $row['d_lname'];?></td>
       <td><?php echo $row['d_phone'];?></td>    

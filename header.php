@@ -105,7 +105,6 @@ margin-top: 20px !important;
                                              <li><a href="cust_login.php">Login to Ride</a></li>
                                          </ul>
                                      </li>
-                                
                                   </ul>
                              </div>
                          </nav><!-- Main Menu End-->

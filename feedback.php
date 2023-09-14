@@ -1,6 +1,3 @@
-<?php
-ob_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,8 +41,7 @@ if(isset($_POST["submit"])){
     $query = "INSERT INTO `feedback`(`ratings`, `comment`,`booking_id`) VALUES ('$ratings','$comments','$booking_id')";
     $result = mysqli_query($conn , $query);
     if($result){
-       echo "<script>alert('Thanks For Submitting Your Reviews');</script>";
-       header("location:booking.php");
+      echo '<script>alert("Thanks For Submitting Your Reviews"); window.location = "./booking.php";</script>';
     }
 }  
 

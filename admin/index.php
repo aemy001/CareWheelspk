@@ -1,5 +1,4 @@
 <?php
-ob_start();
 session_start();
 include("connect.php");
 if($_SESSION["a_email"]){
@@ -226,7 +225,7 @@ $cresult = mysqli_query($conn,$cquery);
             
 
 <?php
-require 'footer.php';
+include 'footer.php';
 ?>
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2023 at 06:37 AM
+-- Generation Time: Sep 14, 2023 at 11:11 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,7 +40,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`a_id`, `a_username`, `a_email`, `a_password`) VALUES
 (1, 'ali', 'ali@gmail.com', 'alii123'),
-(2, 'zoha', 'zoha@gmail.com', 'zoha123');
+(2, 'zoha', 'zoha@gmail.com', 'zoha123'),
+(3, 'ebaad', 'ebad@gmail.com', '123456');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,16 @@ INSERT INTO `booking` (`booking_id`, `pickup_date`, `pickup_time`, `pickup_locat
 (34, '2023-08-22', '09:22:20', 'Mazare Quaid-i-Azam, M.A Jinnah Road, Central Jacob Lin', 'Clifton Hospital, Block 5 Clifton, Karachi, Pakistan', NULL, 700, 5, 23, 1, NULL, 'Started'),
 (35, '2023-08-22', '09:36:17', 'Aptech Computer Education North Nazimabad Center, Block', 'KFC, Khayaban-e-Ittehad Road, Phase 2 Commercial Area D', NULL, 0, 5, 26, 1, NULL, 'Started'),
 (36, '2023-08-22', '09:38:01', 'aptech', 'aptech', NULL, 0, 5, 23, 1, NULL, 'Cancelled'),
-(37, '2023-08-22', '11:14:07', 'Aptech Computer Education North Nazimabad Center, Block', 'Shaheed-e-Millat Government Degree College for Women, A', NULL, 500, 6, 26, 3, NULL, 'Started');
+(37, '2023-08-22', '11:14:07', 'Aptech Computer Education North Nazimabad Center, Block', 'Shaheed-e-Millat Government Degree College for Women, A', NULL, 500, 6, 26, 3, NULL, 'Started'),
+(38, '2023-09-14', '01:50:00', 'Gulistan-e-Johar, Karachi, Pakistan', 'Karsaz Faisal Cantonment, Karachi, Pakistan', NULL, NULL, 6, NULL, 3, NULL, 'Pending'),
+(39, '2023-09-06', '01:30:00', 'Taj Banquet, Sharah-e-Sher Shah Suri, Block A North Naz', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', NULL, 600, 6, 26, 3, NULL, 'Started'),
+(40, '2023-09-05', '12:24:09', 'Taj Banquet, Sharah-e-Sher Shah Suri, Block A North Naz', 'Aptech Computer Education North Nazimabad Center, Block', NULL, NULL, 6, NULL, 3, NULL, 'Pending'),
+(41, '2023-09-05', '12:41:51', 'Taj Banquet, Sharah-e-Sher Shah Suri, Block A North Naz', 'Taj Banquet, Sharah-e-Sher Shah Suri, Block A North Naz', NULL, 600, 8, 26, 1, NULL, 'Started'),
+(42, '2023-09-08', '02:50:00', 'Taj Banquet, Sharah-e-Sher Shah Suri, Block A North Naz', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', NULL, 200, 8, 26, 3, NULL, 'Started'),
+(43, '2023-09-05', '12:55:21', 'Taj Banjara, Hyderabad, Road Number 1, Mithila Nagar, B', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', NULL, 600, 8, 26, 3, NULL, 'Started'),
+(44, '2023-09-06', '02:10:00', 'Aptech Computer Education North Nazimabad Center, Block', 'University of Karachi, KU Circular Road, Karachi, Pakis', NULL, 200, 8, 28, 4, NULL, 'Started'),
+(45, '2023-09-07', '01:40:00', 'Taj Banjara, Hyderabad, Road Number 1, Mithila Nagar, B', 'Aptech Learning, Shahrah e Faisal Center, Shahrah-e-Fai', NULL, 600, 9, 28, 3, NULL, 'Started'),
+(46, '2023-09-07', '03:00:00', 'Aptech Computer Education North Nazimabad Center, Block', 'Taj Banquet, Sharah-e-Sher Shah Suri, Block A North Naz', NULL, 200, 8, 28, 1, NULL, 'Started');
 
 -- --------------------------------------------------------
 
@@ -133,9 +143,11 @@ CREATE TABLE `customers_info` (
 --
 
 INSERT INTO `customers_info` (`c_id`, `c_firstname`, `c_lastname`, `c_phone`, `c_address`, `c_email`, `c_password`) VALUES
-(4, '   MUBASHIRA', '   KHAN', 3115469287, 'nazimabad', 'MUBASHIRA@GMAIL.COM', '123456'),
-(5, '   Zunairaa', '   Jawedd', 3104494368, 'Bahria Town', 'jawedsalman53@gmail.com', '1234567'),
-(6, 'Aemy', 'Khan', 3118753425, 'gulshan karachi', 'baigzoha02@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759');
+(4, '   MUBASHIRA', '   KHAN', 3115469287, 'nazimabad', 'MUBASHIRA@GMAIL.COM', 'fcea920f7412b5da7be0cf42b8c93759'),
+(5, '   Zunairaa', '   Jawedd', 3104494368, 'Bahria Town', 'jawedsalman53@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759'),
+(6, 'Aemy', 'Khan', 3118753425, 'gulshan karachi', 'aimonjawed1289@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759'),
+(8, '  Atika', '  Liaquat', 3118753429, 'gulshan karachi', 'aatikaliaquat16@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(9, ' Ebad', ' 767', 3118753420, 'gulshan karachi', 'ebad@aptechnorth.edu.pk', 'e10adc3949ba59abbe56e057f20f883e');
 
 -- --------------------------------------------------------
 
@@ -165,10 +177,12 @@ INSERT INTO `drivers` (`d_id`, `d_fname`, `d_lname`, `d_phone`, `CNIC`, `d_email
 (14, ' Mujtaba', ' Haider', 3111111111, 4210172636421, 'mujtaba@gmail.com', 'gulberg', '12345', 'Approved'),
 (18, 'Arijit', 'Singh', 3111000001, 4210110101010, 'arijit@gmail.com', 'gulberg', '12345', 'Pending'),
 (20, 'Hamdan', 'Ali', 3020202022, 4210118181811, 'hamdan@gmail.com', 'garden', '12345', 'Pending'),
-(23, ' Ian', ' Somerhalder', 3000127354, 4222222222222, 'iansomerhalder@gmail.com', 'Clifton', '12345', 'Approved'),
-(25, ' Aemy', ' K', 3112345670, 42147899222, 'jawed567@gmail.com', 'garden east, karachi', '1234567', 'Approved'),
-(26, ' zoha', ' baig', 3143521219, 0, 'baigzoha02@gmail.com', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
-(27, ' Tooba', ' Khawar', 2345667811, 0, 'toobakhawar@aptechnorth.edu.pk', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved');
+(23, ' Ian', ' Somerhalder', 3000127354, 4222222222222, 'iansomerhalder@gmail.com', 'Clifton', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
+(25, ' Aemy', ' K', 3112345670, 42147899222, 'jawed567@gmail.com', 'garden east, karachi', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
+(26, ' zoha', ' baig', 3143521219, 4210101010, 'baigzoha02@gmail.com', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
+(27, ' Tooba', ' Khawar', 2345667811, 4210202020, 'toobakhawar@aptechnorth.edu.pk', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
+(28, ' dawood', ' mumtaaz', 7362323238, 0, 'asadiqbal11914@gmail.com', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Approved'),
+(29, 'hafsa', 'asif', 3112345678, 0, 'hafsakhanss87@gmail.com', 'nazimabad', 'fcea920f7412b5da7be0cf42b8c93759', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -195,7 +209,13 @@ INSERT INTO `feedback` (`feedback_id`, `ratings`, `comment`, `booking_id`) VALUE
 (10, 'on', 'good', NULL),
 (13, 'on', 'good', 35),
 (14, 'Mediocre', 'good', 36),
-(15, 'Good', '', 37);
+(15, 'Good', '', 37),
+(16, 'Very Good', 'good', 38),
+(17, 'Very Good', 'good', 38),
+(18, 'Mediocre', 'no complaints', 38),
+(19, 'Mediocre', 'no complaints', 38),
+(20, 'Very Good', 'good', 38),
+(21, 'Mediocre', 'no complaints', 39);
 
 -- --------------------------------------------------------
 
@@ -228,11 +248,11 @@ INSERT INTO `services` (`service_id`, `service_type`, `AC`, `priceperkm`) VALUES
 CREATE TABLE `vehicles` (
   `v_id` int(11) NOT NULL,
   `v_name` varchar(55) NOT NULL,
+  `d_id` int(11) NOT NULL,
   `v_model` varchar(55) NOT NULL,
   `v_year` int(11) NOT NULL,
   `v_capacity` int(11) NOT NULL,
   `v_regNum` varchar(55) NOT NULL,
-  `d_id` int(11) NOT NULL,
   `v_drv_img` varchar(255) DEFAULT NULL,
   `v_cert_img` varchar(255) DEFAULT NULL,
   `v_img` varchar(255) DEFAULT NULL,
@@ -243,15 +263,13 @@ CREATE TABLE `vehicles` (
 -- Dumping data for table `vehicles`
 --
 
-INSERT INTO `vehicles` (`v_id`, `v_name`, `v_model`, `v_year`, `v_capacity`, `v_regNum`, `d_id`, `v_drv_img`, `v_cert_img`, `v_img`, `v_drv_lic`) VALUES
-(1, 'toyota', 'vigo', 2020, 3, 'Y-123', 0, NULL, NULL, NULL, NULL),
-(7, 'toyota', 'HiLux Vigo', 2018, 3, 'Y-121', 21, 'glasses.jpg', NULL, NULL, NULL),
-(8, 'Demers', 'Yellow Type 2', 2018, 2, 'C-543', 22, 'glasses.jpg', 'Aviator.png', '2_HeroDesktop_1920x800.jpg', 'glasses.jpg'),
-(9, 'Demers', 'HiLux Vigo', 2018, 2, 'C-545', 23, 'driver.jpg', 'Smart-Card-Vehicle-Registration.jpg', 'download.jpg', 'license.jpg'),
-(10, 'toyota', 'HiLux Vigo', 2018, 3, 'C-549', 24, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
-(12, 'toyota', 'HiLux Vigo', 2018, 2, 'C-544', 25, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
-(13, 'Toyota', 'Demers', 2007, 2, 'kp-098', 26, 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
-(14, 'Toyota', 'Demers', 2008, 2, 'kp-099', 27, 'license.jpg', 'drvlic.PNG', 'biometric-registration.jpg', ' download.jpg');
+INSERT INTO `vehicles` (`v_id`, `v_name`, `d_id`, `v_model`, `v_year`, `v_capacity`, `v_regNum`, `v_drv_img`, `v_cert_img`, `v_img`, `v_drv_lic`) VALUES
+(8, 'Demers', 23, 'Yellow Type 2', 2018, 2, 'C-543', 'glasses.jpg', 'Aviator.png', '2_HeroDesktop_1920x800.jpg', 'glasses.jpg'),
+(9, 'Demers', 25, 'HiLux Vigo', 2018, 2, 'C-545', 'driver.jpg', 'Smart-Card-Vehicle-Registration.jpg', 'download.jpg', 'license.jpg'),
+(10, 'toyota', 26, 'HiLux Vigo', 2018, 3, 'C-549', 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
+(12, 'toyota', 27, 'HiLux Vigo', 2018, 2, 'C-544', 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
+(13, 'Toyota', 28, 'Demers', 2007, 2, 'kp-098', 'driver2.jpg', 'biometric-registration.jpg', 'vhc2.jpg', ' drvlic.PNG'),
+(14, 'Toyota', 29, 'Demers', 2008, 2, 'kp-099', 'license.jpg', 'drvlic.PNG', 'biometric-registration.jpg', ' download.jpg');
 
 --
 -- Indexes for dumped tables
@@ -324,13 +342,13 @@ ALTER TABLE `vehicles`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -342,19 +360,19 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `customers_info`
 --
 ALTER TABLE `customers_info`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `drivers`
 --
 ALTER TABLE `drivers`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -366,7 +384,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
@@ -386,6 +404,12 @@ ALTER TABLE `booking`
 --
 ALTER TABLE `feedback`
   ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`booking_id`) REFERENCES `booking` (`booking_id`);
+
+--
+-- Constraints for table `vehicles`
+--
+ALTER TABLE `vehicles`
+  ADD CONSTRAINT `vehicles_ibfk_1` FOREIGN KEY (`d_id`) REFERENCES `drivers` (`d_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

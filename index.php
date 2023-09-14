@@ -43,7 +43,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2>Best Worldwide <br> <span class="theme_color">Car Hire</span> Deals</h2></div>
+                    data-endeasing="Power4.easeIn"><h2>Accessible Transportation <br> <span class="theme_color"> Services</span> for Every Need</h2></div>
                     
                     <div class="tp-caption sfr sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -56,7 +56,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text">Discover the best worldwide car hire deals for your ultimate journey.</div></div>
+                    data-endeasing="Power4.easeIn"><div class="text">We provide reliable and accessible transportation solutions for individuals with disabilities.</div></div>
                     
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -113,7 +113,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="booking.php" class="theme-btn btn-style-two">BOOK NOW</a> &nbsp; &nbsp; <a href="booking.php" class="theme-btn btn-style-one">SCHEDULE FOR LATER</a></div>
+                    data-endeasing="Power4.easeIn"><a href="booking.php" class="theme-btn btn-style-two">BOOK YOUR RIDE</a></div>
                     
                     </li>
                     
@@ -131,7 +131,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2 class="text-center">HIRE CAR <span class="theme_color">PROFESSIONAL</span></h2></div>
+                    data-endeasing="Power4.easeIn"><h2 class="text-center">We prioritize passenger safety <span class="theme_color">above all else.</span></h2></div>
                     
                     <div class="tp-caption sfb sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
@@ -144,7 +144,7 @@ include('header.php');
                     data-elementdelay="0.01"
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text text-center">Hire a professional driver for a safe and convenient travel experience.</div></div>
+                    data-endeasing="Power4.easeIn"><div class="text text-center">Our customer support team is available 24/7 to assist you.</div></div>
                     
                     <div class="tp-caption sfb sfb tp-resizeme"
                     data-x="center" data-hoffset="0"

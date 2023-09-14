@@ -19,12 +19,21 @@ if(isset($_POST["submit"])){
    $insert = "INSERT INTO `booking`(`pickup_date`, `pickup_time`, `pickup_location`, `dropoff_location`, `c_id`,`service_id`,`status`) VALUES(' $formattedDate','$selectedTime','$pickuplocation','$dropofflocation','$cust_id','$service','Pending')";
    $result = mysqli_query($conn, $insert);
 
+
+
+
+
+   
+
+
 if(!$result){
     echo "Error";
 }
 else{
     $booking_id = mysqli_insert_id($conn);
+    echo '<script>alert("Finding Rider!! Your Rider will contact you shortly");</script>';
     header("Location: feedback.php?booking_id=$booking_id");
+    exit;
 }
 
 

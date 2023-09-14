@@ -10,8 +10,8 @@
                         <div class="footer-widget logo-widget">
                             <div class="text">Your journey, our commitment - Providing exceptional transport solutions with a touch of excellence</div>
                             <ul class="list-style">
-                                <li><span class="icon flaticon-travel"></span>361 A Napier Street, Knoxville, Newyork  </li>
-                                <li><span class="icon flaticon-technology-1"></span>+091 234 5678</li>
+                                <li><span class="icon flaticon-travel"></span>Karachi, Pakistan  </li>
+                                <li><span class="icon flaticon-technology-1"></span>+923 23034 5678</li>
                                 <li><span class="icon flaticon-planet-earth"></span>carewheels@gmail.com</li>
                             </ul>
                         </div>

@@ -1,6 +1,6 @@
 <?php
-require("connect.php");
 session_start();
+include("connect.php");
 if($_SESSION["a_email"]){
 ?>
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ if($_SESSION["a_email"]){
 <div class="page-wrapper">
 <?php
 include('sidebar.php');
-$query = "SELECT * FROM feedback";
+$query = "SELECT * FROM feedback ORDER BY feedback_id DESC";
 $result = mysqli_query($conn,$query);        
 
       ?>
@@ -57,7 +57,7 @@ $result = mysqli_query($conn,$query);
       <th scope="col">ID</th>
       <th scope="col">Ratings</th>
       <th scope="col">Comments</th>
-      <th scope="col">Booking ID</th>
+
     </tr>
   </thead>
 
@@ -71,8 +71,7 @@ $result = mysqli_query($conn,$query);
       <th scope="row"><?php echo $row['feedback_id'];?></th>
       <td><?php echo $row['ratings'];?></td>
       <td><?php echo $row['comment'];?></td>
-      <td><?php echo $row['booking_id'];?></td>
-    
+   
     </tr>
     <?php 
      }

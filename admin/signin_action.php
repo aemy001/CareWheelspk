@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'connect.php';
+include 'connect.php';
 if(isset($_POST["submit"])){
    
      $email = $_POST["email"];

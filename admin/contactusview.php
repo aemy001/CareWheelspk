@@ -45,7 +45,7 @@ if($_SESSION["a_email"]){
 <div class="page-wrapper">
 <?php
 include('sidebar.php');
-$query = "SELECT * FROM contact";
+$query = "SELECT * FROM contact ORDER BY `cont_id` DESC";
 $result = mysqli_query($conn,$query);        
       
       ?>

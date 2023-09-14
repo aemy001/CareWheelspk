@@ -64,7 +64,7 @@ include('sidebar.php');
  
   <tbody>
   <?php 
-  $cquery = "SELECT * FROM `customers_info`";
+  $cquery = "SELECT * FROM `customers_info` ORDER BY `c_id` DESC";
   $cresult = mysqli_query($conn,$cquery);
   
      while($row=mysqli_fetch_assoc($cresult))

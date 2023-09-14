@@ -36,9 +36,9 @@
                     </div>
                 </div>
                 <?php
-                if (isset($_SESSION['a_email']) || $_SESSION['d_email'] == 1) { ?>
+                if (isset($_SESSION['a_email'])) { ?>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link">Dashboard</a>
+                    <a href="index.php" class="nav-item nav-link">Admin Dashboard</a>
                     <br>
                     <a href="drv_req_pending.php" class="nav-item nav-link">Drivers Request</a>
                     <br>

@@ -64,7 +64,7 @@ if($_SESSION["d_email"]){
   <tbody>
   <?php 
 $d_id = $_SESSION["d_id"];
-  $bquery = "SELECT * FROM `booking` JOIN `customers_info` ON `booking`.`c_id` = `customers_info`.`c_id` JOIN `services` ON `booking`.`service_id`= `services`.`service_id` WHERE `d_id` = '$d_id'";
+  $bquery = "SELECT * FROM `booking` JOIN `customers_info` ON `booking`.`c_id` = `customers_info`.`c_id` JOIN `services` ON `booking`.`service_id`= `services`.`service_id` WHERE `d_id` = '$d_id' ";
   $bresult = mysqli_query($conn,$bquery);
      while($row=mysqli_fetch_assoc($bresult))
      {

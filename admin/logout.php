@@ -7,10 +7,10 @@ if($_SESSION["a_email"]){
     header("location:signin.php");
     exit;
 }
-if($_SESSION["d_email"]){
+else if($_SESSION["d_email"]){
     session_unset();
     session_destroy();
-    header("location:../driver_login.php");
+    header("location:./driver_login.php");
     exit;
 }
 

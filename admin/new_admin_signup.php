@@ -49,7 +49,7 @@
                     <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>TSDP</h3>
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>CareWheels</h3>
                             </a>
                             <h3>CREATE NEW ADMIN</h3>
                         </div>
