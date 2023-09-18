@@ -267,7 +267,7 @@ include('header.php');
 
     function loadMapsApi() {
         var script = document.createElement('script');
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSLb1GeobOtI77rC1bMNsaUBPRA4aztvo&libraries=places&callback=initMap';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap';
         script.defer = true;
         script.async = true;
         document.body.appendChild(script);
