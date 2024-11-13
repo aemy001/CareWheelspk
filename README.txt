@@ -1,39 +1,45 @@
-database name: tsdp2
-CREDENTIALS:
-// you can find more credentials in db
-1. Admin login:
-email: ali@gmail.com
-password: alii123
-2. Driver Login:
-email: jawed567@gmail.com
-password: 1234567
-3. Customer Login:
-email: jawedsalman53@gmail.com
-password: 1234567
+# CareWheels Transportation System
 
+CareWheels is a web-based transportation management system designed to facilitate interactions between admins, drivers, and customers. The system is built using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL.
 
+## Database and Login Credentials
 
+**Database Name**: `tsdp2`
 
+### Credentials:
+1. **Admin Login**:
+   - Email: `ali@gmail.com`
+   - Password: `alii123`
 
-To enable sending mail you need to follow these steps: 
+2. **Driver Login**:
+   - Email: `jawed567@gmail.com`
+   - Password: `1234567`
 
-Go to C:\xampp\php and open the php.ini file.
-Find [mail function] by pressing ctrl + f.
-Search and pass the following values:
-SMTP=smtp.gmail.com
-smtp_port=587
-sendmail_from = YourGmailId@gmail.com
-sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+3. **Customer Login**:
+   - Email: `jawedsalman53@gmail.com`
+   - Password: `1234567`
 
+Additional credentials can be found in the database.
 
-Now, go to C:\xampp\sendmail and open the sendmail.ini file.
+---
 
-Find [sendmail] by pressing ctrl + f.
-Search and pass the following values
-smtp_server=smtp.gmail.com
-smtp_port=587 or 25 //use any of them
-error_logfile=error.log
-debug_logfile=debug.log
-auth_username=YourGmailId@gmail.com
-auth_password=Your-Gmail-Password
-force_sender=YourGmailId@gmail.com(optional)
+## Setup Instructions
+
+To set up the CareWheels system, follow these steps:
+
+### 1. Database Setup
+1. Import the `tsdp2` database into your MySQL server.
+2. Update database connection details in the PHP files, such as the database name, username, and password.
+
+### 2. Enabling Email Functionality
+To enable email functionality on XAMPP, follow these steps:
+
+#### Step 1: Configure `php.ini`
+1. Navigate to `C:\xampp\php` and open the `php.ini` file.
+2. Locate `[mail function]` by pressing `Ctrl + F`.
+3. Set the following values:
+   ```ini
+   SMTP=smtp.gmail.com
+   smtp_port=587
+   sendmail_from=YourGmailId@gmail.com
+   sendmail_path="\"C:\xampp\sendmail\sendmail.exe\" -t"
